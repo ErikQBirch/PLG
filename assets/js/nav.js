@@ -58,16 +58,27 @@ export const navigation = {
 
       worksDB.forEach(obj => {
         console.log(obj.seriesName)
-        let option = helperFunctions.generateElement('article',"","option");
-        let figure = helperFunctions.generateElement('figure');
-        let img = helperFunctions.generateElement('img',"","","",obj.thumbNail)
-        let span = helperFunctions.generateElement('span',"","",obj.seriesName)
+        let option = this.optionListMolecule(obj);
+        popup.children[1].appendChild(option);
+        // console.log(popup.children[1]);
       });
 
 
       main.insertBefore(popup, firstChild);
   },
-  optionListMolecule:function(){},
+  optionListMolecule:function(
+    obj,
+    option = helperFunctions.generateElement('article',"","option"),
+    figure = helperFunctions.generateElement('figure'),
+    img = helperFunctions.generateElement('img',"","","thmbNail",obj.thumbNail),
+    seriesName = helperFunctions.generateElement('span',"","seriesName",obj.seriesName),
+    count = helperFunctions.generateElement('span',"","count",obj.imgs.length)
+  ){
+    option = helperFunctions.nestChildren(option, figure, img);
+    option = helperFunctions.appendChildren(option, seriesName, count);
+    
+    return option;
+  },
   popupMolecule: function(
     popup = helperFunctions.generateElement('section',"popupMolecule"),
     span = helperFunctions.generateElement('span',"","","Select gallery option to view."),

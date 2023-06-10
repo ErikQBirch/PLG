@@ -1,5 +1,16 @@
 export const worksDB = [
   {
+    "seriesName":"All",
+    "thumbNail":"",
+    "imgs":[
+      {
+        "name":"",
+        "thumbNail":"",
+        "mainImg":""
+    }
+    ]
+  },
+  {
     "seriesName":"Fan Art",
     "thumbNail":"",
     "imgs":[
