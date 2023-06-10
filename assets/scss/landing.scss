@@ -1,0 +1,112 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alike+Angular&display=swap');
+
+@mixin centered {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align:center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+
+@media only all and (min-width: 0) {
+  nav{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    // display:none;
+    ul{
+      list-style: none;
+      padding:0;
+      height: fit-content;
+      @include centered();
+      
+      li{
+        width: 100%;
+        button, a{
+          // font-family: 'Alike Angular', serif;
+          color:white;
+          font-size: 1.5rem;
+          padding: 0.5rem;
+          display:flex;
+          width: 100%;
+          text-align:center;
+          @include centered();
+        }
+        button{
+          background-color: transparent;
+          border:none;
+          // font-size: 5rem;
+          // color: rgb(255,240,105)
+        }
+        a:link,
+        a:visited{
+          text-decoration:none;
+        }
+      }
+    }
+
+  }
+}
+@media only all and (min-width: 760px) {
+  nav{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    // transform: translate(-50%, -50%);
+    transform:translate(0%,-50%);
+    z-index: 3;
+    ul{
+      li{
+        button, a{
+          display:flex;
+          flex-direction: row;
+          align-items:center;
+          justify-content: flex-start;
+          // align-items:flex-start;
+          font-weight:lighter;
+          font-style:italic;
+
+          &:link,
+          &:visited{
+          }
+          &:hover,
+          &:active,
+          &:focus{
+            span{
+              width:10px;
+              height:5px;
+              background-color:white;
+              margin-right: 10px;
+              border-radius:50%;
+            }
+        }
+          }
+        button{
+        }
+        a:link,
+        a:visited{
+        }
+      }
+    }
+
+  }
+}
+@media only all and (min-width: 992px) {
+
+}
+@media only all and (min-width: 1200px) {}

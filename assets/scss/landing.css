@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alike+Angular&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media only all and (min-width: 0) {
+  nav {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+  }
+  nav ul {
+    list-style: none;
+    padding: 0;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+  }
+  nav ul li {
+    width: 100%;
+  }
+  nav ul li button, nav ul li a {
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+  }
+  nav ul li button {
+    background-color: transparent;
+    border: none;
+  }
+  nav ul li a:link,
+  nav ul li a:visited {
+    text-decoration: none;
+  }
+}
+@media only all and (min-width: 760px) {
+  nav {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(0%, -50%);
+    z-index: 3;
+  }
+  nav ul li button, nav ul li a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    font-weight: lighter;
+    font-style: italic;
+  }
+  nav ul li button:hover span, nav ul li button:active span, nav ul li button:focus span, nav ul li a:hover span, nav ul li a:active span, nav ul li a:focus span {
+    width: 10px;
+    height: 5px;
+    background-color: white;
+    margin-right: 10px;
+    border-radius: 50%;
+  }
+}/*# sourceMappingURL=landing.css.map */
