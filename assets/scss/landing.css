@@ -38,6 +38,8 @@
     display: flex;
     width: 100%;
     text-align: center;
+    font-weight: lighter;
+    font-style: italic;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,6 +56,76 @@
   nav ul li a:visited {
     text-decoration: none;
   }
+  main {
+    height: 100vh;
+  }
+  main section#background {
+    height: 100vh;
+    overflow: hidden;
+  }
+  main section#background div#filter_tag {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+    background: rgb(0, 13, 29);
+    background: linear-gradient(360deg, rgb(0, 13, 29) 0%, rgba(70, 138, 146, 0) 100%);
+  }
+  main section#background figure {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+  }
+  main section#background figure img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+  }
+  main section#background figure img.deskImg {
+    display: none;
+  }
+  main section#background figure img.keep {
+    animation-name: fadeIn;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+  }
+  main section#background figure img.dying {
+    animation-name: fadeOut;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    z-index: 1;
+  }
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+      filter: blur(0px);
+    }
+    100% {
+      opacity: 0;
+      filter: blur(10px);
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      filter: blur(10px);
+    }
+    100% {
+      opacity: 1;
+      filter: blur(0px);
+    }
+  }
 }
 @media only all and (min-width: 760px) {
   nav {
@@ -68,8 +140,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    font-weight: lighter;
-    font-style: italic;
   }
   nav ul li button:hover span, nav ul li button:active span, nav ul li button:focus span, nav ul li a:hover span, nav ul li a:active span, nav ul li a:focus span {
     width: 10px;
@@ -77,5 +147,19 @@
     background-color: white;
     margin-right: 10px;
     border-radius: 50%;
+  }
+  main section#background div#filter_tag {
+    background: rgb(0, 13, 29);
+    background: linear-gradient(90deg, rgb(0, 13, 29) 10%, rgba(70, 138, 146, 0) 100%);
+  }
+  main section#background figure img {
+    width: auto;
+    height: 100vh;
+  }
+  main section#background figure img.deskImg {
+    display: flex;
+  }
+  main section#background figure img.mobileImg {
+    display: none;
   }
 }/*# sourceMappingURL=landing.css.map */

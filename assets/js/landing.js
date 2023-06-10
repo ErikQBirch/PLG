@@ -24,10 +24,11 @@ const pageStuff = {
   constructHTML: function(
     body = document.querySelector('body'),
     main_tag = this.main(),
-    nav_tag = navigation.nav_molecule(),
+    footer = document.querySelector('footer')
   ){
     // body.appendChild(nav_tag); 
-    body.appendChild(main_tag);
+    // body.appendChild(main_tag);
+    body.insertBefore(main_tag, footer);
     theEvents.backgroundEffect();
   },
   main: function(
@@ -37,7 +38,8 @@ const pageStuff = {
     main_tag = helperFunctions.appendChildren(main_tag, background);
     
     return main_tag;
-  }
+  },
+
 }
 
 const theEvents = {

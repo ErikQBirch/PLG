@@ -13,101 +13,34 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     height: 100vh;
     background-color: black;
   }
-  body section#navSection a#logoArea {
+  body header#navSection a#logoArea {
     position: absolute;
     top: 0;
     z-index: 3;
   }
-  body section#navSection a#logoArea figure {
+  body header#navSection a#logoArea figure {
     width: 40%;
   }
-  body section#navSection a#logoArea figure img {
+  body header#navSection a#logoArea figure img {
     width: 100%;
   }
-  body main {
-    height: 100vh;
-  }
-  body main section#background {
-    height: 100vh;
-    overflow: hidden;
-  }
-  body main section#background div#filter_tag {
+  body #popupMolecule {
+    color: white;
     position: absolute;
-    height: 100vh;
-    width: 100%;
-    z-index: 2;
-    background: rgb(0, 13, 29);
-    background: linear-gradient(360deg, rgb(0, 13, 29) 0%, rgba(70, 138, 146, 0) 100%);
-  }
-  body main section#background figure {
-    height: 100vh;
-    width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    overflow: hidden;
-    position: relative;
-    z-index: 0;
+    bottom: 0;
+    z-index: 4;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 20vh;
   }
-  body main section#background figure img {
+  body footer {
+    color: white;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    width: 100%;
-  }
-  body main section#background figure img.deskImg {
-    display: none;
-  }
-  body main section#background figure img.keep {
-    animation-name: fadeIn;
-    animation-duration: 5s;
-    animation-fill-mode: forwards;
-  }
-  body main section#background figure img.dying {
-    animation-name: fadeOut;
-    animation-duration: 5s;
-    animation-fill-mode: forwards;
-    z-index: 1;
-  }
-  @keyframes fadeOut {
-    0% {
-      opacity: 1;
-      filter: blur(0px);
-    }
-    100% {
-      opacity: 0;
-      filter: blur(10px);
-    }
-  }
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      filter: blur(10px);
-    }
-    100% {
-      opacity: 1;
-      filter: blur(0px);
-    }
-  }
-}
-@media only all and (min-width: 760px) {
-  body main section#background div#filter_tag {
-    background: rgb(0, 13, 29);
-    background: linear-gradient(90deg, rgb(0, 13, 29) 10%, rgba(70, 138, 146, 0) 100%);
-  }
-  body main section#background figure img {
-    width: auto;
-    height: 100vh;
-  }
-  body main section#background figure img.deskImg {
-    display: flex;
-  }
-  body main section#background figure img.mobileImg {
-    display: none;
+    bottom: 0;
+    z-index: 3;
   }
 }/*# sourceMappingURL=index.css.map */

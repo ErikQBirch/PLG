@@ -1,0 +1,79 @@
+export const worksDB = [
+  {
+    "seriesName":"Fan Art",
+    "thumbNail":"",
+    "imgs":[
+      {
+        "name":"",
+        "thumbNail":"",
+        "mainImg":""
+    }
+    ]
+  },
+  {
+    "seriesName":"Twisted Taverns",
+    "thumbNail":"",
+    "imgs":[
+      {
+        "name":"",
+        "thumbNail":"",
+        "mainImg":""
+    }
+    ]
+  },
+  {
+    "seriesName":"The Belgariad",
+    "thumbNail":"",
+    "imgs":[
+      {
+        "name":"",
+        "thumbNail":"",
+        "mainImg":""
+    }
+    ]
+  },
+  {
+    "seriesName":"Rise of Cultures",
+    "thumbNail":"",
+    "imgs":[
+      {
+        "name":"",
+        "thumbNail":"",
+        "mainImg":""
+    }
+    ]
+  },
+  {
+    "seriesName":"The Wheel of Time",
+    "thumbNail":"",
+    "imgs":[
+      {
+        "name":"",
+        "thumbNail":"",
+        "mainImg":""
+    }
+    ]
+  },
+  {
+    "seriesName":"Practice Work",
+    "thumbNail":"",
+    "imgs":[
+      {
+        "name":"",
+        "thumbNail":"",
+        "mainImg":""
+    }
+    ]
+  },
+  {
+    "seriesName":"Misc",
+    "thumbNail":"",
+    "imgs":[
+      {
+        "name":"",
+        "thumbNail":"",
+        "mainImg":""
+    }
+    ]
+  },
+]
