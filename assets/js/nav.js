@@ -60,7 +60,7 @@ export const navigation = {
         console.log(obj.seriesName)
         let option = this.optionListMolecule(obj);
         popup.children[1].appendChild(option);
-        // console.log(popup.children[1]);
+        // console.log(popup.children[1]);w
       });
 
 
@@ -69,23 +69,27 @@ export const navigation = {
   optionListMolecule:function(
     obj,
     option = helperFunctions.generateElement('article',"","option"),
+    optionLink = helperFunctions.generateElement('a',"","","",obj.id),
     figure = helperFunctions.generateElement('figure'),
     img = helperFunctions.generateElement('img',"","","thmbNail",obj.thumbNail),
     seriesName = helperFunctions.generateElement('span',"","seriesName",obj.seriesName),
     count = helperFunctions.generateElement('span',"","count",obj.imgs.length)
   ){
-    option = helperFunctions.nestChildren(option, figure, img);
-    option = helperFunctions.appendChildren(option, seriesName, count);
+    optionLink = helperFunctions.nestChildren(optionLink, figure, img);
+    optionLink = helperFunctions.appendChildren(optionLink, seriesName, count);
+    option.appendChild(optionLink);
     
     return option;
   },
   popupMolecule: function(
     popup = helperFunctions.generateElement('section',"popupMolecule"),
-    span = helperFunctions.generateElement('span',"","","Select gallery option to view."),
+    span = helperFunctions.generateElement('span',"instructions","","Scroll and select gallery option to view."),
     optionHolder = helperFunctions.generateElement('div',"optionHolder"),
-    xBtn = helperFunctions.generateElement('button',"xBtn","","X")
+    btnHolder = helperFunctions.generateElement('div',"btnHolder"),
+    xBtn = helperFunctions.generateElement('button',"xBtn","","Cancel")
   ){
-    popup = helperFunctions.appendChildren(popup, span, optionHolder, xBtn);
+    btnHolder.appendChild(xBtn);
+    popup = helperFunctions.appendChildren(popup, span, optionHolder, btnHolder);
 
     xBtn.addEventListener('click', (e,
        )=>{

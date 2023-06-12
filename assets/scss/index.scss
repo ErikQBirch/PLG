@@ -18,6 +18,13 @@
   box-sizing: border-box;
 }
 
+button{
+  &:hover, &:active, &:focus{
+    cursor: pointer;
+  }
+}
+
+
 h1,h2,h3,h4,h5,p,div,article,a,button{
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -31,9 +38,21 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
         position: absolute;
         top:0;
         z-index: 3;
+        display:flex;
+        width: fit-content;
+        text-decoration: none;
         figure{
+          display:flex;
           width: 40%;
           img{ width: 100%; }
+        }
+        span{
+          font-size: 5rem;
+          color: rgb(255,240,105);
+          font-family: 'Alike Angular', serif;
+          background-color:red;
+          text-shadow: 2px 2px 5px black;
+          text-align:center;
         }
       }
     }
@@ -47,8 +66,66 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
       z-index: 4; 
       height: 100%;
       width: 100%;
-      background-color: rgba(0,0,0,0.5);
+      background-color: rgba(0,0,0,0.25);
       padding-top: 20vh;
+      span#instructions{
+        margin-bottom:1rem;
+      }
+      div#optionHolder{
+        width: 75%;
+        height: 65vh;
+        overflow-y: scroll;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none; 
+        &::-webkit-scrollbar{
+          display:none;
+        }
+        
+        a{
+          width: 95%;
+          margin: 0 auto;
+          &:link, &:visited{
+            display:flex;
+            align-items: center;
+            // justify-content: center;
+            background-color: rgba(0,0,0,0.5);
+            color:white;
+            text-decoration: none;
+            margin: 0.5rem auto;
+            font-style: italic;
+            border: 1px solid rgba(100,100,100,1);
+            figure{
+              width: 40%;
+              img{
+                width: 100%;
+              }
+            }
+            span.seriesName{
+              width: 50%;
+              padding-left: 1rem;
+            }
+            span.count{
+              width:10%;
+            }
+          }
+          &:hover, &:active, &:focus{
+            box-shadow: 0px 0px 5px white;
+          }
+        }
+
+      }
+      div#btnHolder{
+        width: 70%;
+        display:flex;
+        justify-content: flex-end;
+        margin-top:1rem;
+        button{
+          color:white;
+          background-color: transparent;
+          border: none;
+          font-style: italic;
+        }
+      }
     }
     footer{
       color:white;

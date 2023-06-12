@@ -5,10 +5,10 @@ const pageStuff = {
   background: function(
     background = helperFunctions.generateElement('section',"background"),
     figure_tag = helperFunctions.generateElement('figure'),
-    img_tag1 = helperFunctions.generateElement('img',"","mobileImg","","assets/content/imgs/mobile1.webp"),
-    img_tag2 = helperFunctions.generateElement('img',"","deskImg","","assets/content/imgs/desk1.webp"),
-    img_tag3 = helperFunctions.generateElement('img',"","mobileImg","","assets/content/imgs/mobile2.webp"),
-    img_tag4 = helperFunctions.generateElement('img',"","deskImg","","assets/content/imgs/desk2.webp"),
+    img_tag1 = helperFunctions.generateElement('img',"","mobileImg","","assets/content/imgs/backgrounds/mobile1.webp"),
+    img_tag2 = helperFunctions.generateElement('img',"","deskImg","","assets/content/imgs/backgrounds/desk1.webp"),
+    img_tag3 = helperFunctions.generateElement('img',"","mobileImg","","assets/content/imgs/backgrounds/mobile2.webp"),
+    img_tag4 = helperFunctions.generateElement('img',"","deskImg","","assets/content/imgs/backgrounds/desk2.webp"),
     filter_tag = helperFunctions.generateElement('div',"filter_tag")
     ){
       img_tag1.classList.add('dying');
@@ -46,18 +46,18 @@ const theEvents = {
   backgroundEffect: function(
     figure_tag = document.querySelector('#background').children[1],
     mobileImgs = [
-      "assets/content/imgs/mobile1.webp",
-      "assets/content/imgs/mobile2.webp",
-      "assets/content/imgs/mobile3.webp",
-      "assets/content/imgs/mobile4.webp",
-      "assets/content/imgs/mobile5.webp",
+      "assets/content/imgs/backgrounds/mobile1.webp",
+      "assets/content/imgs/backgrounds/mobile2.webp",
+      "assets/content/imgs/backgrounds/mobile3.webp",
+      "assets/content/imgs/backgrounds/mobile4.webp",
+      "assets/content/imgs/backgrounds/mobile5.webp",
     ],
     deskImgs = [
-      "assets/content/imgs/desk1.webp",
-      "assets/content/imgs/desk2.webp",
-      "assets/content/imgs/desk3.webp",
-      "assets/content/imgs/desk4.webp",
-      "assets/content/imgs/desk5.webp",
+      "assets/content/imgs/backgrounds/desk1.webp",
+      "assets/content/imgs/backgrounds/desk2.webp",
+      "assets/content/imgs/backgrounds/desk3.webp",
+      "assets/content/imgs/backgrounds/desk4.webp",
+      "assets/content/imgs/backgrounds/desk5.webp",
     ],
     options = ["mobileImg","deskImg"],
     counter_m = 2,

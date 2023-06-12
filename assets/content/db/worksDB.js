@@ -1,7 +1,8 @@
 export const worksDB = [
   {
+    "id":0,
     "seriesName":"All",
-    "thumbNail":"",
+    "thumbNail":"assets/content/imgs/thumbnails/Misc/thmb_misc2.webp",
     "imgs":[
       {
         "name":"",
@@ -12,7 +13,7 @@ export const worksDB = [
   },
   {
     "seriesName":"Fan Art",
-    "thumbNail":"",
+    "thumbNail":"assets/content/imgs/thumbnails/FanArt/thmb_fan1.webp",
     "imgs":[
       {
         "name":"",
@@ -22,8 +23,9 @@ export const worksDB = [
     ]
   },
   {
+    "id":1,
     "seriesName":"Twisted Taverns",
-    "thumbNail":"",
+    "thumbNail":"assets/content/imgs/thumbnails/Taverns/thmb_tavern1.webp",
     "imgs":[
       {
         "name":"",
@@ -33,8 +35,9 @@ export const worksDB = [
     ]
   },
   {
+    "id":2,
     "seriesName":"The Belgariad",
-    "thumbNail":"",
+    "thumbNail":"assets/content/imgs/thumbnails/Belgariad/thmb_belgariad1.webp",
     "imgs":[
       {
         "name":"",
@@ -44,8 +47,9 @@ export const worksDB = [
     ]
   },
   {
+    "id":3,
     "seriesName":"Rise of Cultures",
-    "thumbNail":"",
+    "thumbNail":"assets/content/imgs/thumbnails/Cultures/thmb_cultures2.webp",
     "imgs":[
       {
         "name":"",
@@ -55,8 +59,9 @@ export const worksDB = [
     ]
   },
   {
+    "id":4,
     "seriesName":"The Wheel of Time",
-    "thumbNail":"",
+    "thumbNail":"assets/content/imgs/thumbnails/Time/thmb_time1.webp",
     "imgs":[
       {
         "name":"",
@@ -66,19 +71,9 @@ export const worksDB = [
     ]
   },
   {
-    "seriesName":"Practice Work",
-    "thumbNail":"",
-    "imgs":[
-      {
-        "name":"",
-        "thumbNail":"",
-        "mainImg":""
-    }
-    ]
-  },
-  {
+    "id":5,
     "seriesName":"Misc",
-    "thumbNail":"",
+    "thumbNail":"assets/content/imgs/thumbnails/Misc/thmb_misc1.webp",
     "imgs":[
       {
         "name":"",
@@ -87,4 +82,17 @@ export const worksDB = [
     }
     ]
   },
+  {
+    "id":6,
+    "seriesName":"Practice Work",
+    "thumbNail":"assets/content/imgs/thumbnails/Practice/thmb_practice1.webp",
+    "imgs":[
+      {
+        "name":"",
+        "thumbNail":"",
+        "mainImg":""
+    }
+    ]
+  },
+
 ]

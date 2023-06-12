@@ -26,9 +26,11 @@ const pageStuff = {
   logo_element: function(
     link = helperFunctions.generateElement('a', "logoArea"),
     figure = helperFunctions.generateElement('figure'),
-    logo = helperFunctions.generateElement('img',"","","","./assets/content/imgs/PLG_logo.webp")
+    logo = helperFunctions.generateElement('img',"","","","./assets/content/imgs/PLG_logo.webp"),
+    // span = helperFunctions.generateElement('span',"","","PAULO<br>GALAMGAM")
   ){
     link = helperFunctions.nestChildren(link, figure, logo);
+    // link.appendChild(span);
     return link;
   },
 
