@@ -113,7 +113,7 @@ export const navigation = {
   optionListMolecule:function(
     obj,
     option = helperFunctions.generateElement('article',"","option"),
-    optionLink = helperFunctions.generateElement('a',"","","",`pages/gallery.html?id=${obj.id}`),
+    optionLink = helperFunctions.generateElement('a',"","","",`${this.pathAdjuster[0]}pages/gallery.html?id=${obj.id}`),
     figure = helperFunctions.generateElement('figure'),
     img = helperFunctions.generateElement('img',"","","thmbNail",`${this.pathAdjuster[0] + obj.thumbNail}`),
     seriesName = helperFunctions.generateElement('span',"","seriesName",obj.seriesName),
@@ -123,6 +123,7 @@ export const navigation = {
     optionLink = helperFunctions.appendChildren(optionLink, seriesName, count);
     option.appendChild(optionLink);
     
+    console.log(this.pathAdjuster)
     return option;
   },
   popupMolecule: function(
