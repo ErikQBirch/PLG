@@ -8,14 +8,15 @@
 }
 
 @media only all and (min-width: 0) {
-  nav {
+  body header nav#mainNav {
     position: absolute;
     top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 3;
+    display: flex;
   }
-  nav ul {
+  body header nav#mainNav ul {
     list-style: none;
     padding: 0;
     height: -moz-fit-content;
@@ -28,10 +29,10 @@
     margin: 0 auto;
     width: 100%;
   }
-  nav ul li {
+  body header nav#mainNav ul li {
     width: 100%;
   }
-  nav ul li button, nav ul li a {
+  body header nav#mainNav ul li button, body header nav#mainNav ul li a {
     color: white;
     font-size: 1.5rem;
     padding: 0.5rem;
@@ -48,22 +49,28 @@
     margin: 0 auto;
     width: 100%;
   }
-  nav ul li button {
+  body header nav#mainNav ul li button {
     background-color: transparent;
     border: none;
   }
-  nav ul li a:link,
-  nav ul li a:visited {
+  body header nav#mainNav ul li a:link,
+  body header nav#mainNav ul li a:visited {
     text-decoration: none;
   }
-  main {
+  body header div#menu-btn {
+    display: none;
+  }
+  body header section#sideMenu {
+    display: none;
+  }
+  body main {
     height: 100vh;
   }
-  main section#background {
+  body main section#background {
     height: 100vh;
     overflow: hidden;
   }
-  main section#background div#filter_tag {
+  body main section#background div#filter_tag {
     position: absolute;
     height: 100vh;
     width: 100%;
@@ -71,7 +78,7 @@
     background: rgb(0, 13, 29);
     background: linear-gradient(360deg, rgb(0, 13, 29) 0%, rgba(70, 138, 146, 0) 100%);
   }
-  main section#background figure {
+  body main section#background figure {
     height: 100vh;
     width: 100%;
     display: flex;
@@ -81,7 +88,7 @@
     position: relative;
     z-index: 0;
   }
-  main section#background figure img {
+  body main section#background figure img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -92,15 +99,15 @@
     min-height: 100vh;
     width: 100%;
   }
-  main section#background figure img.deskImg {
+  body main section#background figure img.deskImg {
     display: none;
   }
-  main section#background figure img.keep {
+  body main section#background figure img.keep {
     animation-name: fadeIn;
     animation-duration: 5s;
     animation-fill-mode: forwards;
   }
-  main section#background figure img.dying {
+  body main section#background figure img.dying {
     animation-name: fadeOut;
     animation-duration: 5s;
     animation-fill-mode: forwards;
@@ -128,38 +135,38 @@
   }
 }
 @media only all and (min-width: 760px) {
-  nav {
+  body header nav#mainNav {
     position: absolute;
     top: 50%;
     left: 5%;
     transform: translate(0%, -50%);
     z-index: 3;
   }
-  nav ul li button, nav ul li a {
+  body header nav#mainNav ul li button, body header nav#mainNav ul li a {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
   }
-  nav ul li button:hover span, nav ul li button:active span, nav ul li button:focus span, nav ul li a:hover span, nav ul li a:active span, nav ul li a:focus span {
+  body header nav#mainNav ul li button:hover span, body header nav#mainNav ul li button:active span, body header nav#mainNav ul li button:focus span, body header nav#mainNav ul li a:hover span, body header nav#mainNav ul li a:active span, body header nav#mainNav ul li a:focus span {
     width: 10px;
     height: 5px;
     background-color: white;
     margin-right: 10px;
     border-radius: 50%;
   }
-  main section#background div#filter_tag {
+  body main section#background div#filter_tag {
     background: rgb(0, 13, 29);
     background: linear-gradient(90deg, rgb(0, 13, 29) 10%, rgba(70, 138, 146, 0) 100%);
   }
-  main section#background figure img {
+  body main section#background figure img {
     width: auto;
     height: 100vh;
   }
-  main section#background figure img.deskImg {
+  body main section#background figure img.deskImg {
     display: flex;
   }
-  main section#background figure img.mobileImg {
+  body main section#background figure img.mobileImg {
     display: none;
   }
 }/*# sourceMappingURL=landing.css.map */

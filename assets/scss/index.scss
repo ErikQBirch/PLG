@@ -33,7 +33,7 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
   body{
     height: 100vh;
     background-color:black;
-    header#navSection{
+    header{
       a#logoArea{
         position: absolute;
         top:0;
@@ -41,9 +41,10 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
         display:flex;
         width: fit-content;
         text-decoration: none;
+        width: 150px;
         figure{
           display:flex;
-          width: 40%;
+          width: 100%;
           img{ width: 100%; }
         }
         span{
@@ -53,6 +54,152 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
           background-color:red;
           text-shadow: 2px 2px 5px black;
           text-align:center;
+        }
+      }
+      nav#mainNav{
+        display:none;
+      }
+      div#menu-btn{
+        position:relative;
+        color:rgb(175, 255, 255);
+        z-index: 4;
+        font-size: 2rem;
+        align-items:center;
+        justify-content: center;
+        cursor: pointer;
+        span{
+          border: 1px solid rgb(175, 255, 255);
+          position:absolute;
+          top:25px;
+          right:25px;
+          width: 50px;
+          height: 50px;
+          display:flex;
+          align-items:center;
+          justify-content: center;
+          transition: opacity 0.5s;
+          &.faded{
+            opacity:0;
+          }
+        }
+      }
+      section#sideMenu{
+        position:absolute;
+        top:0;
+        left:0;
+        z-index: 3;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0,0,0,0.5);
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        &.closed{
+          display:none;
+        }
+        nav{
+          ul{
+            list-style: none;
+            padding:0;
+            li{
+              border:1px solid white;
+              margin: 0.5rem 0;
+              &:hover,&:active,&:focus{
+                border:2.5px solid white;
+                box-shadow: 0 0 5px white;
+              }
+              a, button{
+                text-align:center;
+                border:none;
+                background-color: transparent;
+                color:white;
+                background-color: rgba(0,0,0,0.5);
+                width: 100%;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                padding: 1rem 5rem;
+                &:link, &:visited{
+                  // color:white;
+                  text-decoration:none;
+                }
+              }
+              button{
+              }
+            }
+          }
+        }
+      }
+    }
+    main{
+      height: 100vh;
+      section#background{
+        height: 100vh;
+        overflow:hidden;
+        div#filter_tag{
+          position:absolute;
+          height: 100vh;
+          width: 100%;
+          z-index: 2;
+          background: rgb(0,13,29);
+          background: linear-gradient(360deg, rgba(0,13,29,1) 0%, rgba(70,138,146,0) 100%);  
+        }
+        figure{
+          height: 100vh;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow:hidden;
+          position: relative;
+          z-index:0;
+          img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            // height: 100%;
+            min-height: 100vh;
+            width: 100%;
+            &.deskImg{
+              display:none;
+            }
+            &.keep{
+              animation-name:fadeIn;
+              animation-duration: 5s;
+              animation-fill-mode:forwards;
+            }
+            &.dying{
+              animation-name:fadeOut;
+              animation-duration: 5s;
+              animation-fill-mode:forwards;
+              z-index:1;
+            }
+            @keyframes fadeOut{
+              0%{
+                opacity: 1;
+                filter: blur(0px);
+              }
+              100%{
+                opacity: 0;
+                filter: blur(10px);
+              }
+            }
+            @keyframes fadeIn{
+              0%{
+                opacity: 0;
+                filter: blur(10px);
+              }
+              100%{
+                opacity: 1;
+                filter: blur(0px);
+              }
+            }
+          }
+          
         }
       }
     }
@@ -110,6 +257,7 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
           }
           &:hover, &:active, &:focus{
             box-shadow: 0px 0px 5px white;
+            border: 2.5px solid rgba(100,100,100,1);
           }
         }
 
@@ -138,9 +286,70 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
 }
 @media only all and (min-width: 760px) {
   body{
+    header{
+      a#logoArea{
+        width: 200px;
+        figure{
+        }
+        span{
+        }
+      }
+    }
+    main{
+      section#background{
+        div#filter_tag{
+          background: rgb(0,13,29);
+          background: linear-gradient(90deg, rgba(0,13,29,1) 10%, rgba(70,138,146,0) 100%);
+        }
+        figure{
+          img{
+            width: auto;
+            height: 100vh;
+            &.deskImg{
+              display:flex;
+            }
+            &.mobileImg{
+              display:none;
+            }
+            &.dying{
+            }
+          }
+          
+        }
+      }
+    }
+
   }
 }
 @media only all and (min-width: 992px) {
+  body{
+    #popupMolecule{
+      span#instructions{
+      }
+      div#optionHolder{
+        width: 40%;
+        a{
+          &:link, &:visited{
+            figure{
+              img{
+              }
+            }
+            span.seriesName{
+            }
+            span.count{
+            }
+          }
+          &:hover, &:active, &:focus{
+          }
+        }
 
+      }
+      div#btnHolder{
+        width: 37.5%;
+        button{
+        }
+      }
+    }
+  }
 }
 @media only all and (min-width: 1200px) {}

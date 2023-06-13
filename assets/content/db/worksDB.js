@@ -61,7 +61,7 @@ export const worksDB = [
   {
     "id":4,
     "seriesName":"The Wheel of Time",
-    "thumbNail":"assets/content/imgs/thumbnails/Time/thmb_time1.webp",
+    "thumbNail":"assets/content/imgs/thumbnails/Time/thmb_time2.webp",
     "imgs":[
       {
         "name":"",
