@@ -79,7 +79,7 @@ export const navigation = {
       //   li_tag.appendChild(gallery_btn);
       // }
       else{
-        let a_tag = helperFunctions.generateElement('a',"","",`<span></span>${opt}`,`*`);
+        let a_tag = helperFunctions.generateElement('a',"","",`<span></span>${opt}`,`${this.pathAdjuster[0]}pages/${opt.toLowerCase()}.html`);
         li_tag.appendChild(a_tag);
       }
       ul_tag.appendChild(li_tag);
