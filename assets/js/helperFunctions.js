@@ -121,6 +121,15 @@ export const helperFunctions = {
     // console.log(pathAdjuster);
   return pathAdjuster;
   },
+  getSingleUrlParam: function(  //Beta
+    //urlParams.get(''), urlParams.has(''), urlParams.getAll(''),
+    param, 
+    queryString = window.location.search,
+    urlParams = new URLSearchParams(queryString),
+    singleParam = urlParams.get(param)
+  ){
+    return singleParam;
+  },
   metaInfo: function(
     content = {
       "keywordList": "",

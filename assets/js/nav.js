@@ -10,7 +10,7 @@ export const navigation = {
     li_tag = helperFunctions.generateElement('li'),
     a_tag = helperFunctions.generateElement('a',"","",`<span></span>Home`,`${this.pathAdjuster[0]}`)
   ){
-    console.log(this.currentPage);
+    // console.log(this.currentPage);
     if (this.currentPage != "index"){
       ul_tag = helperFunctions.nestChildren(ul_tag, li_tag,a_tag)
     }
@@ -22,7 +22,7 @@ export const navigation = {
     background = document.querySelector('#background'),
     popup = document.querySelector('#popupMolecule')
   ){
-        header.style.display = "initial";
+    header.classList.remove('clear');
         footer.style.display = "flex";
         background.style.filter = "none";
         popup.remove();
@@ -96,11 +96,11 @@ export const navigation = {
     footer = document.querySelector('footer'),
     background = document.querySelector('#background')
   ){
-      header.style.display = "none";
+      header.classList.add('clear');
       footer.style.display = "none";
       background.style.filter = "blur(10px)";
 
-      worksDB.forEach(obj => {
+      worksDB.array.forEach(obj => {
         console.log(obj.seriesName)
         let option = this.optionListMolecule(obj);
         popup.children[1].appendChild(option);

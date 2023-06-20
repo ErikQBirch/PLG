@@ -1,34 +1,39 @@
 import { helperFunctions } from "./helperFunctions.js";
 
 export const specialFeatures = {
-  carousel: { //REVIEW IAN THOMPSON SITE FOR BETTER VERSION
+  carousel: {
     carousel_organism: function(
-      carousel_array,
+      contentType,
+      carouselName,
+      carouselArray,
       counter = 0,
+      // filter = helperFunctions.generateElement('div',"", "filter"),
       carousel_tag = helperFunctions.generateElement('div',"carousel"),
       slideHolder = helperFunctions.generateElement('div',"slideHolder"),
       slideControls = this.carousel_slideControls(),
       carousel_nav = helperFunctions.generateElement('div', "carousel_nav"),
-      carousel_note = helperFunctions.generateElement('span',"carousel_note","","Click/Tap to enlarge")
+      // carousel_note = helperFunctions.generateElement('a',"carousel_note","","See More","../pages/reviews.html")
     ){
       
-      carousel_array.forEach(img => {
-        let slide = this.carousel_singleSlide(img, counter);
+      carouselArray.forEach(item => {
+        // console.log(item);
+        let slide = this.carousel_singleSlide(contentType, item, counter);
         slideHolder.appendChild(slide);
-        carousel_nav = this.carousel_navBtns(carousel_nav, counter);
+        carousel_nav = this.carousel_navBtns(carousel_nav, counter, item.keyLetter);
         counter++;
         
       });
   
-      carousel_tag = helperFunctions.appendChildren(carousel_tag, slideHolder,slideControls)
-      let carousel = [carousel_tag,carousel_nav, carousel_note];
+      carousel_tag = helperFunctions.appendChildren(carousel_tag, slideHolder)
+      let carousel = [carousel_nav, carousel_tag, slideControls];
       return carousel;
   
     },
     carousel_navBtns: function(
       navBtns,
       counter,
-      slideBtn = helperFunctions.generateElement('button',`${counter}`,"slideBtn","<i class='fa-solid fa-circle'></i>") 
+      keyLetter,
+      slideBtn = helperFunctions.generateElement('button',`${counter}`,"slideBtn",`${keyLetter}`) 
     ){
       navBtns.appendChild(slideBtn);
       return navBtns;
@@ -42,12 +47,32 @@ export const specialFeatures = {
       return slideControls;
     },
     carousel_singleSlide: function(
-      imgPath,
-      counter,
-      figure = helperFunctions.generateElement('figure',`slide${counter}`, "slide"),
-      img = helperFunctions.generateElement('img',"","","carouselImg",`../${imgPath}`)){
-        figure.appendChild(img);
-        return figure;
+      contentType,
+      item,
+      counter,)
+      {
+        let returnedSlide;
+        switch (contentType) {
+          case "img":
+            returnedSlide = helperFunctions.generateElement('figure',`slide${counter}`, "slide");
+            let img = helperFunctions.generateElement('img',"","","carouselImg",`../${item}`);
+            returnedSlide.appendChild(img);
+            break;
+          case "textObject":
+            returnedSlide = helperFunctions.generateElement('div',`slide${counter}`,"slide",);
+            for (const key in item){
+              let p = helperFunctions.generateElement('p',"","",item[key]);
+              returnedSlide.append(p);
+            }
+            break;
+          case "gallery":
+            console.log(item);
+            returnedSlide = this.singleGallery(item.seriesName, item.imgs, counter);
+            break;
+          default:
+            break;
+        }
+        return returnedSlide;
     },
     functionality: {
       index: 1,
@@ -59,6 +84,7 @@ export const specialFeatures = {
         centerSlide, formerslide, slideArray
       ){
         let target;
+        let idLength
         document.querySelector(".currentBtn").classList.remove('currentBtn');
         formerslide.classList.remove('currentSlide');
         
@@ -67,7 +93,9 @@ export const specialFeatures = {
         else { centerSlide.classList.add('currentSlide')};
 
         target = document.querySelector('.currentSlide').id;
-        document.getElementById(target.substring(5,6)).classList.add('currentBtn');
+        idLength = target.length
+        console.log(target, target.substring(idLength-1, idLength));
+        document.getElementById(target.substring(idLength-1, idLength)).classList.add('currentBtn');
         
       },
       checkDirection: function(slideHolder, slideWidth) {
@@ -78,7 +106,7 @@ export const specialFeatures = {
         if (this.touchendX > this.touchstartX) {
           this.moveToPrevSlide(slideHolder,slideWidth);
         }
-        this.startSlides(slideHolder,slideWidth);
+        // this.startSlides(slideHolder,slideWidth);
       },
       getSlides: function(){return document.querySelectorAll('.slide')},   
       moveToNextSlide: function(slideHolder, slideWidth){
@@ -100,20 +128,6 @@ export const specialFeatures = {
         slideHolder.style.transform = `translate(${-slideWidth*this.index}px)`;
         slideHolder.style.transition = '0.75s';
       },
-      previewCurrentSlide: function(
-        imgPath,
-        main = document.querySelector('main'),
-        section = helperFunctions.generateElement('section',"preview"),
-        figure = helperFunctions.generateElement('figure'),
-        img = helperFunctions.generateElement('img',"","","",imgPath),
-        note = helperFunctions.generateElement('span',"","","Click/Tap anywhere to close")
-      ){
-        main = helperFunctions.nestChildren(main, section,figure,img);
-        section.appendChild(note);
-        section.addEventListener('click',()=>{
-          section.remove();
-        })
-      },
       setUp: function(
         carousel = document.getElementById('carousel'),
         slideHolder = document.getElementById('slideHolder'),
@@ -133,7 +147,7 @@ export const specialFeatures = {
         slideNav_array[0].classList.add('currentBtn');
         slideHolder.style.transform = `translateX(${-slideWidth * this.index}px)`;
         
-        this.startSlides(slideHolder, slideWidth);
+        // this.startSlides(slideHolder, slideWidth);
         this.theEvents(carousel, slideHolder,nextBtn,prevBtn,slideWidth,slideNav_array)
 
       },
@@ -182,7 +196,7 @@ export const specialFeatures = {
           if (e.target.id == "slideControls"){
             let currentSlide = document.querySelector('.currentSlide');
             let currentImg = currentSlide.children[0].src;
-            this.previewCurrentSlide(currentImg);
+            // this.previewCurrentSlide(currentImg);
           }
         });
 
@@ -197,6 +211,30 @@ export const specialFeatures = {
         }
       },
     },
+    singleGallery: function(
+      seriesName,
+      imgInfo,
+      counter,
+      article = helperFunctions.generateElement('article',`gallery${counter}`, 'slide')
+    ){
+      console.log(seriesName);
+      let h2 = helperFunctions.generateElement('h2',"","",seriesName);
+      article.appendChild(h2);
+
+      imgInfo.forEach(item => {
+        // console.log(item);
+        let figure = helperFunctions.generateElement('figure');
+        let img_element = helperFunctions.generateElement('img',"","","",`../${item.thumbNail}`);
+        // article = helperFunctions.appendChildren(article, h2);
+        article = helperFunctions.nestChildren(article, figure, img_element);
+        console.log(article);
+        figure.addEventListener('click',()=>{})
+      });
+
+
+
+      return article;
+    }
   },
   fadeAndRotateImg: function(){},
   lazyLoading: function(

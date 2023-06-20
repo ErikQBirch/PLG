@@ -85,6 +85,7 @@
           z-index: 2;
           background: rgb(0,13,29);
           background: linear-gradient(360deg, rgba(0,13,29,1) 0%, rgba(70,138,146,0) 100%);  
+          box-shadow:none;
         }
         figure{
           height: 100vh;
@@ -198,7 +199,6 @@
         div#filter_tag{
           background: rgb(0,13,29);
           background: linear-gradient(90deg, rgba(0,13,29,1) 10%, rgba(70,138,146,0) 100%);
-          box-shadow:none;
         }
         figure{
           img{
@@ -222,4 +222,15 @@
 @media only all and (min-width: 992px) {
 
 }
-@media only all and (min-width: 1200px) {}
+@media only all and (min-width: 1200px) {
+  body{
+    header{
+      nav#mainNav{
+        background-color: transparent;
+        background-image:none;
+        width: fit-content;
+        height: fit-content;
+      }
+    }
+  }
+}

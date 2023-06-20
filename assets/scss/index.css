@@ -111,6 +111,12 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   body header section#sideMenu nav ul li a:link, body header section#sideMenu nav ul li a:visited, body header section#sideMenu nav ul li button:link, body header section#sideMenu nav ul li button:visited {
     text-decoration: none;
   }
+  body header.clear a#logoArea, body header.clear nav#mainNav > ul, body header.clear div#menu-btn, body header.clear section#sideMenu {
+    display: none;
+  }
+  body header.clear nav#mainNav {
+    filter: blur(10px);
+  }
   body main {
     height: 100vh;
   }
@@ -281,5 +287,44 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   }
   body #popupMolecule div#btnHolder {
     width: 37.5%;
+  }
+}
+@media only all and (min-width: 1200px) {
+  body header nav#mainNav {
+    display: flex;
+    height: 7.5vh;
+    width: 100%;
+    background-color: rgb(0, 0, 100);
+    background-image: radial-gradient(circle at 100% 150%, rgb(10, 1, 15) 24%, rgb(15, 15, 15) 24%, rgb(15, 15, 15) 28%, rgb(10, 1, 15) 28%, rgb(10, 1, 15) 36%, rgb(15, 15, 15) 36%, rgb(15, 15, 15) 40%, transparent 40%, transparent), radial-gradient(circle at 0 150%, rgb(10, 1, 15) 24%, rgb(15, 15, 15) 24%, rgb(15, 15, 15) 28%, rgb(10, 1, 15) 28%, rgb(10, 1, 15) 36%, rgb(15, 15, 15) 36%, rgb(15, 15, 15) 40%, transparent 40%, transparent), radial-gradient(circle at 50% 100%, rgb(15, 15, 15) 10%, rgb(10, 1, 15) 10%, rgb(10, 1, 15) 23%, rgb(15, 15, 15) 23%, rgb(15, 15, 15) 30%, rgb(10, 1, 15) 30%, rgb(10, 1, 15) 43%, rgb(15, 15, 15) 43%, rgb(15, 15, 15) 50%, rgb(10, 1, 15) 50%, rgb(10, 1, 15) 63%, rgb(15, 15, 15) 63%, rgb(15, 15, 15) 71%, transparent 71%, transparent), radial-gradient(circle at 100% 50%, rgb(15, 15, 15) 5%, rgb(10, 1, 15) 5%, rgb(10, 1, 15) 15%, rgb(15, 15, 15) 15%, rgb(15, 15, 15) 20%, rgb(10, 1, 15) 20%, rgb(10, 1, 15) 29%, rgb(15, 15, 15) 29%, rgb(15, 15, 15) 34%, rgb(10, 1, 15) 34%, rgb(10, 1, 15) 44%, rgb(15, 15, 15) 44%, rgb(15, 15, 15) 49%, transparent 49%, transparent), radial-gradient(circle at 0 50%, rgb(15, 15, 15) 5%, rgb(10, 1, 15) 5%, rgb(10, 1, 15) 15%, rgb(15, 15, 15) 15%, rgb(15, 15, 15) 20%, rgb(10, 1, 15) 20%, rgb(10, 1, 15) 29%, rgb(15, 15, 15) 29%, rgb(15, 15, 15) 34%, rgb(10, 1, 15) 34%, rgb(10, 1, 15) 44%, rgb(15, 15, 15) 44%, rgb(15, 15, 15) 49%, transparent 49%, transparent);
+    background-size: 100px 50px;
+  }
+  body header nav#mainNav ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  body header nav#mainNav ul li a, body header nav#mainNav ul li button {
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    font-size: 1.25rem;
+  }
+  body header div#menu-btn {
+    display: none;
+    cursor: pointer;
+  }
+  body header div#menu-btn span {
+    display: none;
+  }
+  body main {
+    height: 92.5vh;
+  }
+  body main section#background {
+    height: 92.5vh;
+  }
+  body main section#background div#filter_tag {
+    height: 92.5vh;
   }
 }/*# sourceMappingURL=index.css.map */

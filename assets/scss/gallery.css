@@ -16,4 +16,134 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   body header#navSection div#menu-btn {
     display: flex;
   }
+  body main section#background div#filter_tag {
+    box-shadow: inset 0 0 50px rgb(0, 175, 255);
+  }
+  body main section#carousel_element,
+  body main section#carousel_element > div.filter {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  body main section#carousel_element div.filter,
+  body main section#carousel_element > div.filter div.filter {
+    box-shadow: inset 0 0 50px rgb(0, 175, 255);
+  }
+  body main section#carousel_element #carousel_nav,
+  body main section#carousel_element > div.filter #carousel_nav {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    margin: 5rem auto 1rem auto;
+  }
+  body main section#carousel_element #carousel_nav button,
+  body main section#carousel_element > div.filter #carousel_nav button {
+    margin: 0 0.25rem;
+    border: none;
+    background-color: transparent;
+    transition: color 0.25s;
+    color: white;
+    cursor: pointer;
+  }
+  body main section#carousel_element #carousel_nav button.currentBtn,
+  body main section#carousel_element > div.filter #carousel_nav button.currentBtn {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  body main section#carousel_element #carousel_nav button:hover, body main section#carousel_element #carousel_nav button:active, body main section#carousel_element #carousel_nav button:focus,
+  body main section#carousel_element > div.filter #carousel_nav button:hover,
+  body main section#carousel_element > div.filter #carousel_nav button:active,
+  body main section#carousel_element > div.filter #carousel_nav button:focus {
+    color: rgb(0, 152, 219);
+  }
+  body main section#carousel_element #carousel,
+  body main section#carousel_element > div.filter #carousel {
+    color: white;
+    width: 90vw;
+    height: 60vh;
+    overflow: hidden;
+    display: flex;
+    margin: 0 auto;
+  }
+  body main section#carousel_element #carousel #slideHolder,
+  body main section#carousel_element > div.filter #carousel #slideHolder {
+    display: flex;
+    height: 60vh;
+  }
+  body main section#carousel_element #carousel #slideHolder article,
+  body main section#carousel_element > div.filter #carousel #slideHolder article {
+    height: 60vh;
+    width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+  }
+  body main section#carousel_element #carousel #slideHolder article figure, body main section#carousel_element #carousel #slideHolder article img,
+  body main section#carousel_element > div.filter #carousel #slideHolder article figure,
+  body main section#carousel_element > div.filter #carousel #slideHolder article img {
+    width: 100%;
+  }
+  body main section#carousel_element #carousel #slideHolder article figure,
+  body main section#carousel_element > div.filter #carousel #slideHolder article figure {
+    margin: 1rem auto;
+  }
+  body main section#carousel_element #slideControls,
+  body main section#carousel_element > div.filter #slideControls {
+    display: flex;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 40%;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+  }
+  body main section#carousel_element #slideControls button,
+  body main section#carousel_element > div.filter #slideControls button {
+    color: rgba(255, 255, 255, 0.75);
+    background-color: transparent;
+    font-size: 5rem;
+    width: 3.5rem;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.25s;
+    cursor: pointer;
+  }
+  body main section#carousel_element #slideControls button:hover, body main section#carousel_element #slideControls button:active, body main section#carousel_element #slideControls button:focus,
+  body main section#carousel_element > div.filter #slideControls button:hover,
+  body main section#carousel_element > div.filter #slideControls button:active,
+  body main section#carousel_element > div.filter #slideControls button:focus {
+    background-color: rgba(0, 152, 219, 0.5);
+  }
+  body main section#carousel_element #carousel_note,
+  body main section#carousel_element > div.filter #carousel_note {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    margin: 1rem auto;
+    padding: 1rem;
+    width: -moz-fit-content;
+    width: fit-content;
+    color: white;
+    width: 100%;
+  }
+  body main section#carousel_element #carousel_note:hover,
+  body main section#carousel_element > div.filter #carousel_note:hover {
+    color: rgb(0, 152, 219);
+  }
+  body main section#carousel_element #carousel_note:active, body main section#carousel_element #carousel_note:focus,
+  body main section#carousel_element > div.filter #carousel_note:active,
+  body main section#carousel_element > div.filter #carousel_note:focus {
+    color: rgb(236, 145, 74);
+  }
 }/*# sourceMappingURL=gallery.css.map */
