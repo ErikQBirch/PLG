@@ -47,15 +47,19 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   }
   body header div#menu-btn {
     position: relative;
-    color: rgb(175, 255, 255);
+    text-shadow: 0 0 0.5rem rgb(0, 175, 255);
+    color: rgb(0, 175, 255);
     z-index: 4;
     font-size: 2rem;
     align-items: center;
     justify-content: center;
     cursor: pointer;
   }
+  body header div#menu-btn:hover, body header div#menu-btn:active, body header div#menu-btn:focus {
+    color: white;
+  }
   body header div#menu-btn span {
-    border: 1px solid rgb(175, 255, 255);
+    border: 1px solid rgb(0, 175, 255);
     position: absolute;
     top: 25px;
     right: 25px;
@@ -129,8 +133,8 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     height: 100vh;
     width: 100%;
     z-index: 2;
-    background-color: rgb(0, 0, 100);
-    background-image: radial-gradient(circle at 100% 150%, rgb(0, 0, 100) 24%, rgb(0, 0, 150) 24%, rgb(0, 0, 150) 28%, rgb(0, 0, 100) 28%, rgb(0, 0, 100) 36%, rgb(0, 0, 150) 36%, rgb(0, 0, 150) 40%, transparent 40%, transparent), radial-gradient(circle at 0 150%, rgb(0, 0, 100) 24%, rgb(0, 0, 150) 24%, rgb(0, 0, 150) 28%, rgb(0, 0, 100) 28%, rgb(0, 0, 100) 36%, rgb(0, 0, 150) 36%, rgb(0, 0, 150) 40%, transparent 40%, transparent), radial-gradient(circle at 50% 100%, rgb(0, 0, 150) 10%, rgb(0, 0, 100) 10%, rgb(0, 0, 100) 23%, rgb(0, 0, 150) 23%, rgb(0, 0, 150) 30%, rgb(0, 0, 100) 30%, rgb(0, 0, 100) 43%, rgb(0, 0, 150) 43%, rgb(0, 0, 150) 50%, rgb(0, 0, 100) 50%, rgb(0, 0, 100) 63%, rgb(0, 0, 150) 63%, rgb(0, 0, 150) 71%, transparent 71%, transparent), radial-gradient(circle at 100% 50%, rgb(0, 0, 150) 5%, rgb(0, 0, 100) 5%, rgb(0, 0, 100) 15%, rgb(0, 0, 150) 15%, rgb(0, 0, 150) 20%, rgb(0, 0, 100) 20%, rgb(0, 0, 100) 29%, rgb(0, 0, 150) 29%, rgb(0, 0, 150) 34%, rgb(0, 0, 100) 34%, rgb(0, 0, 100) 44%, rgb(0, 0, 150) 44%, rgb(0, 0, 150) 49%, transparent 49%, transparent), radial-gradient(circle at 0 50%, rgb(0, 0, 150) 5%, rgb(0, 0, 100) 5%, rgb(0, 0, 100) 15%, rgb(0, 0, 150) 15%, rgb(0, 0, 150) 20%, rgb(0, 0, 100) 20%, rgb(0, 0, 100) 29%, rgb(0, 0, 150) 29%, rgb(0, 0, 150) 34%, rgb(0, 0, 100) 34%, rgb(0, 0, 100) 44%, rgb(0, 0, 150) 44%, rgb(0, 0, 150) 49%, transparent 49%, transparent);
+    background-color: rgb(0, 0, 30);
+    background-image: radial-gradient(circle at 100% 150%, rgb(0, 0, 30) 24%, rgb(0, 0, 75) 24%, rgb(0, 0, 75) 28%, rgb(0, 0, 30) 28%, rgb(0, 0, 30) 36%, rgb(0, 0, 75) 36%, rgb(0, 0, 75) 40%, transparent 40%, transparent), radial-gradient(circle at 0 150%, rgb(0, 0, 30) 24%, rgb(0, 0, 75) 24%, rgb(0, 0, 75) 28%, rgb(0, 0, 30) 28%, rgb(0, 0, 30) 36%, rgb(0, 0, 75) 36%, rgb(0, 0, 75) 40%, transparent 40%, transparent), radial-gradient(circle at 50% 100%, rgb(0, 0, 75) 10%, rgb(0, 0, 30) 10%, rgb(0, 0, 30) 23%, rgb(0, 0, 75) 23%, rgb(0, 0, 75) 30%, rgb(0, 0, 30) 30%, rgb(0, 0, 30) 43%, rgb(0, 0, 75) 43%, rgb(0, 0, 75) 50%, rgb(0, 0, 30) 50%, rgb(0, 0, 30) 63%, rgb(0, 0, 75) 63%, rgb(0, 0, 75) 71%, transparent 71%, transparent), radial-gradient(circle at 100% 50%, rgb(0, 0, 75) 5%, rgb(0, 0, 30) 5%, rgb(0, 0, 30) 15%, rgb(0, 0, 75) 15%, rgb(0, 0, 75) 20%, rgb(0, 0, 30) 20%, rgb(0, 0, 30) 29%, rgb(0, 0, 75) 29%, rgb(0, 0, 75) 34%, rgb(0, 0, 30) 34%, rgb(0, 0, 30) 44%, rgb(0, 0, 75) 44%, rgb(0, 0, 75) 49%, transparent 49%, transparent), radial-gradient(circle at 0 50%, rgb(0, 0, 75) 5%, rgb(0, 0, 30) 5%, rgb(0, 0, 30) 15%, rgb(0, 0, 75) 15%, rgb(0, 0, 75) 20%, rgb(0, 0, 30) 20%, rgb(0, 0, 30) 29%, rgb(0, 0, 75) 29%, rgb(0, 0, 75) 34%, rgb(0, 0, 30) 34%, rgb(0, 0, 30) 44%, rgb(0, 0, 75) 44%, rgb(0, 0, 75) 49%, transparent 49%, transparent);
     background-size: 100px 50px;
     box-shadow: inset 0 0 50px rgb(0, 175, 255);
   }
@@ -294,7 +298,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     display: flex;
     height: 7.5vh;
     width: 100%;
-    background-color: rgb(0, 0, 100);
+    background-color: rgb(0, 0, 30);
     background-image: radial-gradient(circle at 100% 150%, rgb(10, 1, 15) 24%, rgb(15, 15, 15) 24%, rgb(15, 15, 15) 28%, rgb(10, 1, 15) 28%, rgb(10, 1, 15) 36%, rgb(15, 15, 15) 36%, rgb(15, 15, 15) 40%, transparent 40%, transparent), radial-gradient(circle at 0 150%, rgb(10, 1, 15) 24%, rgb(15, 15, 15) 24%, rgb(15, 15, 15) 28%, rgb(10, 1, 15) 28%, rgb(10, 1, 15) 36%, rgb(15, 15, 15) 36%, rgb(15, 15, 15) 40%, transparent 40%, transparent), radial-gradient(circle at 50% 100%, rgb(15, 15, 15) 10%, rgb(10, 1, 15) 10%, rgb(10, 1, 15) 23%, rgb(15, 15, 15) 23%, rgb(15, 15, 15) 30%, rgb(10, 1, 15) 30%, rgb(10, 1, 15) 43%, rgb(15, 15, 15) 43%, rgb(15, 15, 15) 50%, rgb(10, 1, 15) 50%, rgb(10, 1, 15) 63%, rgb(15, 15, 15) 63%, rgb(15, 15, 15) 71%, transparent 71%, transparent), radial-gradient(circle at 100% 50%, rgb(15, 15, 15) 5%, rgb(10, 1, 15) 5%, rgb(10, 1, 15) 15%, rgb(15, 15, 15) 15%, rgb(15, 15, 15) 20%, rgb(10, 1, 15) 20%, rgb(10, 1, 15) 29%, rgb(15, 15, 15) 29%, rgb(15, 15, 15) 34%, rgb(10, 1, 15) 34%, rgb(10, 1, 15) 44%, rgb(15, 15, 15) 44%, rgb(15, 15, 15) 49%, transparent 49%, transparent), radial-gradient(circle at 0 50%, rgb(15, 15, 15) 5%, rgb(10, 1, 15) 5%, rgb(10, 1, 15) 15%, rgb(15, 15, 15) 15%, rgb(15, 15, 15) 20%, rgb(10, 1, 15) 20%, rgb(10, 1, 15) 29%, rgb(15, 15, 15) 29%, rgb(15, 15, 15) 34%, rgb(10, 1, 15) 34%, rgb(10, 1, 15) 44%, rgb(15, 15, 15) 44%, rgb(15, 15, 15) 49%, transparent 49%, transparent);
     background-size: 100px 50px;
   }

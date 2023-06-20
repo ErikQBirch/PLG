@@ -8,12 +8,12 @@
   flex-direction: column;
   justify-content: center;
   div.filter{
-    box-shadow: inset 0 0 50px rgb(0, 175, 255);
+    box-shadow: inset 0 0 50px rgb(0, 225, 255);
   }
   #carousel_nav{
     display:flex;
-    width: 50%;
-    justify-content: center;
+    width: 100%;
+    justify-content: space-evenly;
     margin: 5rem auto 1rem auto;
     
     button{
@@ -21,15 +21,18 @@
       border:none;
       background-color: transparent;
       transition: color 0.25s;
-      color: white;
+      font-weight:bolder;
+      text-shadow: 0 0 0.5rem rgb(0, 175, 255);
+      color: rgb(0, 175, 255);
       cursor:pointer;
+      font-size: 2.5rem;
     }
     button.currentBtn{
-      color: rgba(255,255,255,0.5);
+      color: white;
     }
     button{
       &:hover,&:active,&:focus{
-        color:rgb(0,152,219);
+        color:white;
       }
     }
   }
@@ -53,14 +56,33 @@
           margin: 0 auto;
           display:flex;
           flex-direction: column;
+          
           // justify-content: center;
           align-items:center;
           overflow-y:scroll;
-          figure, img{
-            width: 100%;
+          h2{
+            text-shadow: 0 0 0.5rem rgb(0, 175, 255);
+            color: rgb(0, 175, 255);
           }
-          figure{
-            margin: 1rem auto;
+          div#figureHolder{
+            height: 60vh;
+            width: 90vw;
+            padding: 0 1rem;
+            display:flex;
+            flex-direction: column;
+            figure, img{
+              width: 100%;
+              height: 100%;
+              display:flex;
+              border: 1px solid rgb(0,175,255);
+            }
+            figure{
+              margin: 0.5rem auto;
+              &:hover, &:active, &:focus{
+                border: 2px solid white;
+                box-shadow: 0 0 0.5rem rgb(0,175,255);
+              }
+            }
           }
         }
         // div.slide{
@@ -91,20 +113,22 @@
       height: fit-content;
       width: 40%;
       display:flex;
-      margin: 0 auto;
+      margin: 1rem auto;
       align-items:center;
       justify-content:space-between;
       button{
-        color:rgba(255,255,255,0.75);
+        text-shadow: 0 0 0.5rem rgb(0, 175, 255);
+        color: rgb(0, 175, 255);
         background-color: transparent;
-        font-size: 5rem;
+        font-size: 3.5rem;
         width: 3.5rem;
         border:none;          
         border-radius: 5px;
         transition: background-color 0.25s;
         cursor:pointer;
         &:hover,&:active,&:focus{
-          background-color: rgba(0,152,219, 0.5);
+          // background-color: rgba(0,152,219, 0.5); 
+          color:white;
         }
       }
     }
@@ -121,6 +145,111 @@
       }
       &:active, &:focus{
         color:rgba(236,145,74,1);
+      }
+    }
+}
+@mixin minCarousel {
+  #carousel_nav{
+    button{
+    }
+    button.currentBtn{
+    }
+    button{
+      &:hover,&:active,&:focus{
+      }
+    }
+  }
+    #carousel{
+      #slideHolder{
+        article{
+          h2{
+          }
+          div#figureHolder{
+            // flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 1rem;
+            figure, img{
+            }
+            figure{
+              width: 80%;
+              // margin: 1rem auto;
+              // box-sizing:border-box;
+              &:hover, &:active, &:focus{
+              }
+            }
+          }
+        }
+      }
+
+      button{
+        
+      }
+    }
+    #slideControls{
+      button{
+        cursor:pointer;
+        &:hover,&:active,&:focus{
+        }
+      }
+    }
+
+    #carousel_note {
+      &:hover{
+      }
+      &:active, &:focus{
+      }
+    }
+}
+@mixin medCarousel {
+  #carousel_nav{
+    button{
+    }
+    button.currentBtn{
+    }
+    button{
+      &:hover,&:active,&:focus{
+      }
+    }
+  }
+    #carousel{
+      #slideHolder{
+        article{
+          background-color: yellow;
+          h2{
+          }
+          div#figureHolder{
+            // flex-wrap: wrap;
+            grid-template-columns: 1fr 1fr 1fr;
+            figure, img{
+            }
+            figure{
+              width: 40%;
+              // margin: 1rem auto;
+              // box-sizing:border-box;
+              &:hover, &:active, &:focus{
+              }
+            }
+          }
+        }
+      }
+
+      button{
+        
+      }
+    }
+    #slideControls{
+      button{
+        cursor:pointer;
+        &:hover,&:active,&:focus{
+        }
+      }
+    }
+
+    #carousel_note {
+      &:hover{
+      }
+      &:active, &:focus{
       }
     }
 }

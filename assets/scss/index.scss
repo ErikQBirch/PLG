@@ -61,14 +61,18 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
       }
       div#menu-btn{
         position:relative;
-        color:rgb(175, 255, 255);
+        text-shadow: 0 0 0.5rem rgb(0, 175, 255);
+        color: rgb(0, 175, 255);
         z-index: 4;
         font-size: 2rem;
         align-items:center;
         justify-content: center;
         cursor: pointer;
+        &:hover,&:active,&:focus{
+          color:white;
+        }
         span{
-          border: 1px solid rgb(175, 255, 255);
+          border: 1px solid rgb(0, 175, 255);
           position:absolute;
           top:25px;
           right:25px;
@@ -150,13 +154,13 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
           width: 100%;
           z-index: 2;
 
-          background-color:rgba(0,0,100,1);
+          background-color:rgba(0,0,30,1);
           background-image:
-          radial-gradient(circle at 100% 150%, rgba(0,0,100,1) 24%, rgba(0,0,150,1) 24%, rgba(0,0,150,1) 28%, rgba(0,0,100,1) 28%, rgba(0,0,100,1) 36%, rgba(0,0,150,1) 36%, rgba(0,0,150,1) 40%, transparent 40%, transparent),
-          radial-gradient(circle at 0    150%, rgba(0,0,100,1) 24%, rgba(0,0,150,1) 24%, rgba(0,0,150,1) 28%, rgba(0,0,100,1) 28%, rgba(0,0,100,1) 36%, rgba(0,0,150,1) 36%, rgba(0,0,150,1) 40%, transparent 40%, transparent),
-          radial-gradient(circle at 50%  100%, rgba(0,0,150,1) 10%, rgba(0,0,100,1) 10%, rgba(0,0,100,1) 23%, rgba(0,0,150,1) 23%, rgba(0,0,150,1) 30%, rgba(0,0,100,1) 30%, rgba(0,0,100,1) 43%, rgba(0,0,150,1) 43%, rgba(0,0,150,1) 50%, rgba(0,0,100,1) 50%, rgba(0,0,100,1) 63%, rgba(0,0,150,1) 63%, rgba(0,0,150,1) 71%, transparent 71%, transparent),
-          radial-gradient(circle at 100% 50%, rgba(0,0,150,1) 5%, rgba(0,0,100,1) 5%, rgba(0,0,100,1) 15%, rgba(0,0,150,1) 15%, rgba(0,0,150,1) 20%, rgba(0,0,100,1) 20%, rgba(0,0,100,1) 29%, rgba(0,0,150,1) 29%, rgba(0,0,150,1) 34%, rgba(0,0,100,1) 34%, rgba(0,0,100,1) 44%, rgba(0,0,150,1) 44%, rgba(0,0,150,1) 49%, transparent 49%, transparent),
-          radial-gradient(circle at 0    50%, rgba(0,0,150,1) 5%, rgba(0,0,100,1) 5%, rgba(0,0,100,1) 15%, rgba(0,0,150,1) 15%, rgba(0,0,150,1) 20%, rgba(0,0,100,1) 20%, rgba(0,0,100,1) 29%, rgba(0,0,150,1) 29%, rgba(0,0,150,1) 34%, rgba(0,0,100,1) 34%, rgba(0,0,100,1) 44%, rgba(0,0,150,1) 44%, rgba(0,0,150,1) 49%, transparent 49%, transparent);
+          radial-gradient(circle at 100% 150%, rgba(0,0,30,1) 24%, rgba(0,0,75,1) 24%, rgba(0,0,75,1) 28%, rgba(0,0,30,1) 28%, rgba(0,0,30,1) 36%, rgba(0,0,75,1) 36%, rgba(0,0,75,1) 40%, transparent 40%, transparent),
+          radial-gradient(circle at 0    150%, rgba(0,0,30,1) 24%, rgba(0,0,75,1) 24%, rgba(0,0,75,1) 28%, rgba(0,0,30,1) 28%, rgba(0,0,30,1) 36%, rgba(0,0,75,1) 36%, rgba(0,0,75,1) 40%, transparent 40%, transparent),
+          radial-gradient(circle at 50%  100%, rgba(0,0,75,1) 10%, rgba(0,0,30,1) 10%, rgba(0,0,30,1) 23%, rgba(0,0,75,1) 23%, rgba(0,0,75,1) 30%, rgba(0,0,30,1) 30%, rgba(0,0,30,1) 43%, rgba(0,0,75,1) 43%, rgba(0,0,75,1) 50%, rgba(0,0,30,1) 50%, rgba(0,0,30,1) 63%, rgba(0,0,75,1) 63%, rgba(0,0,75,1) 71%, transparent 71%, transparent),
+          radial-gradient(circle at 100% 50%, rgba(0,0,75,1) 5%, rgba(0,0,30,1) 5%, rgba(0,0,30,1) 15%, rgba(0,0,75,1) 15%, rgba(0,0,75,1) 20%, rgba(0,0,30,1) 20%, rgba(0,0,30,1) 29%, rgba(0,0,75,1) 29%, rgba(0,0,75,1) 34%, rgba(0,0,30,1) 34%, rgba(0,0,30,1) 44%, rgba(0,0,75,1) 44%, rgba(0,0,75,1) 49%, transparent 49%, transparent),
+          radial-gradient(circle at 0    50%, rgba(0,0,75,1) 5%, rgba(0,0,30,1) 5%, rgba(0,0,30,1) 15%, rgba(0,0,75,1) 15%, rgba(0,0,75,1) 20%, rgba(0,0,30,1) 20%, rgba(0,0,30,1) 29%, rgba(0,0,75,1) 29%, rgba(0,0,75,1) 34%, rgba(0,0,30,1) 34%, rgba(0,0,30,1) 44%, rgba(0,0,75,1) 44%, rgba(0,0,75,1) 49%, transparent 49%, transparent);
           background-size: 100px 50px;
   
           box-shadow: inset 0 0 50px rgb(0, 175, 255);
@@ -383,7 +387,7 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
         display:flex;
         height: 7.5vh;
         width: 100%;
-        background-color:rgba(0,0,100,1);
+        background-color:rgba(0,0,30,1);
           background-image:
           radial-gradient(circle at 100% 150%, rgba(10,1,15,1) 24%, rgba(15,15,15,1) 24%, rgba(15,15,15,1) 28%, rgba(10,1,15,1) 28%, rgba(10,1,15,1) 36%, rgba(15,15,15,1) 36%, rgba(15,15,15,1) 40%, transparent 40%, transparent),
           radial-gradient(circle at 0    150%, rgba(10,1,15,1) 24%, rgba(15,15,15,1) 24%, rgba(15,15,15,1) 28%, rgba(10,1,15,1) 28%, rgba(10,1,15,1) 36%, rgba(15,15,15,1) 36%, rgba(15,15,15,1) 40%, transparent 40%, transparent),

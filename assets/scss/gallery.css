@@ -32,13 +32,13 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   }
   body main section#carousel_element div.filter,
   body main section#carousel_element > div.filter div.filter {
-    box-shadow: inset 0 0 50px rgb(0, 175, 255);
+    box-shadow: inset 0 0 50px rgb(0, 225, 255);
   }
   body main section#carousel_element #carousel_nav,
   body main section#carousel_element > div.filter #carousel_nav {
     display: flex;
-    width: 50%;
-    justify-content: center;
+    width: 100%;
+    justify-content: space-evenly;
     margin: 5rem auto 1rem auto;
   }
   body main section#carousel_element #carousel_nav button,
@@ -47,18 +47,21 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     border: none;
     background-color: transparent;
     transition: color 0.25s;
-    color: white;
+    font-weight: bolder;
+    text-shadow: 0 0 0.5rem rgb(0, 175, 255);
+    color: rgb(0, 175, 255);
     cursor: pointer;
+    font-size: 2.5rem;
   }
   body main section#carousel_element #carousel_nav button.currentBtn,
   body main section#carousel_element > div.filter #carousel_nav button.currentBtn {
-    color: rgba(255, 255, 255, 0.5);
+    color: white;
   }
   body main section#carousel_element #carousel_nav button:hover, body main section#carousel_element #carousel_nav button:active, body main section#carousel_element #carousel_nav button:focus,
   body main section#carousel_element > div.filter #carousel_nav button:hover,
   body main section#carousel_element > div.filter #carousel_nav button:active,
   body main section#carousel_element > div.filter #carousel_nav button:focus {
-    color: rgb(0, 152, 219);
+    color: white;
   }
   body main section#carousel_element #carousel,
   body main section#carousel_element > div.filter #carousel {
@@ -84,14 +87,37 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     align-items: center;
     overflow-y: scroll;
   }
-  body main section#carousel_element #carousel #slideHolder article figure, body main section#carousel_element #carousel #slideHolder article img,
-  body main section#carousel_element > div.filter #carousel #slideHolder article figure,
-  body main section#carousel_element > div.filter #carousel #slideHolder article img {
-    width: 100%;
+  body main section#carousel_element #carousel #slideHolder article h2,
+  body main section#carousel_element > div.filter #carousel #slideHolder article h2 {
+    text-shadow: 0 0 0.5rem rgb(0, 175, 255);
+    color: rgb(0, 175, 255);
   }
-  body main section#carousel_element #carousel #slideHolder article figure,
-  body main section#carousel_element > div.filter #carousel #slideHolder article figure {
-    margin: 1rem auto;
+  body main section#carousel_element #carousel #slideHolder article div#figureHolder,
+  body main section#carousel_element > div.filter #carousel #slideHolder article div#figureHolder {
+    height: 60vh;
+    width: 90vw;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  body main section#carousel_element #carousel #slideHolder article div#figureHolder figure, body main section#carousel_element #carousel #slideHolder article div#figureHolder img,
+  body main section#carousel_element > div.filter #carousel #slideHolder article div#figureHolder figure,
+  body main section#carousel_element > div.filter #carousel #slideHolder article div#figureHolder img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border: 1px solid rgb(0, 175, 255);
+  }
+  body main section#carousel_element #carousel #slideHolder article div#figureHolder figure,
+  body main section#carousel_element > div.filter #carousel #slideHolder article div#figureHolder figure {
+    margin: 0.5rem auto;
+  }
+  body main section#carousel_element #carousel #slideHolder article div#figureHolder figure:hover, body main section#carousel_element #carousel #slideHolder article div#figureHolder figure:active, body main section#carousel_element #carousel #slideHolder article div#figureHolder figure:focus,
+  body main section#carousel_element > div.filter #carousel #slideHolder article div#figureHolder figure:hover,
+  body main section#carousel_element > div.filter #carousel #slideHolder article div#figureHolder figure:active,
+  body main section#carousel_element > div.filter #carousel #slideHolder article div#figureHolder figure:focus {
+    border: 2px solid white;
+    box-shadow: 0 0 0.5rem rgb(0, 175, 255);
   }
   body main section#carousel_element #slideControls,
   body main section#carousel_element > div.filter #slideControls {
@@ -100,15 +126,16 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     height: fit-content;
     width: 40%;
     display: flex;
-    margin: 0 auto;
+    margin: 1rem auto;
     align-items: center;
     justify-content: space-between;
   }
   body main section#carousel_element #slideControls button,
   body main section#carousel_element > div.filter #slideControls button {
-    color: rgba(255, 255, 255, 0.75);
+    text-shadow: 0 0 0.5rem rgb(0, 175, 255);
+    color: rgb(0, 175, 255);
     background-color: transparent;
-    font-size: 5rem;
+    font-size: 3.5rem;
     width: 3.5rem;
     border: none;
     border-radius: 5px;
@@ -119,7 +146,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   body main section#carousel_element > div.filter #slideControls button:hover,
   body main section#carousel_element > div.filter #slideControls button:active,
   body main section#carousel_element > div.filter #slideControls button:focus {
-    background-color: rgba(0, 152, 219, 0.5);
+    color: white;
   }
   body main section#carousel_element #carousel_note,
   body main section#carousel_element > div.filter #carousel_note {
@@ -145,5 +172,24 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   body main section#carousel_element > div.filter #carousel_note:active,
   body main section#carousel_element > div.filter #carousel_note:focus {
     color: rgb(236, 145, 74);
+  }
+}
+@media only all and (min-width: 760px) {
+  body header#navSection div#menu-btn {
+    display: flex;
+  }
+  body main section#carousel_element #carousel #slideHolder article div#figureHolder,
+  body main section#carousel_element > div.filter #carousel #slideHolder article div#figureHolder {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1rem;
+  }
+  body main section#carousel_element #carousel #slideHolder article div#figureHolder figure,
+  body main section#carousel_element > div.filter #carousel #slideHolder article div#figureHolder figure {
+    width: 80%;
+  }
+  body main section#carousel_element #slideControls button,
+  body main section#carousel_element > div.filter #slideControls button {
+    cursor: pointer;
   }
 }/*# sourceMappingURL=gallery.css.map */

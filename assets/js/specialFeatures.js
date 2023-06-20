@@ -40,8 +40,8 @@ export const specialFeatures = {
     },
     carousel_slideControls: function(
       slideControls = helperFunctions.generateElement('div',"slideControls"),
-      prevBtn = helperFunctions.generateElement('button',"prevBtn","shiftBtn","<i class='fa-solid fa-caret-left'></i>"),
-      nextBtn = helperFunctions.generateElement('button',"nextBtn","shiftBtn","<i class='fa-solid fa-caret-right'></i>")
+      prevBtn = helperFunctions.generateElement('button',"prevBtn","shiftBtn","<i class='fa-solid fa-chevron-left'></i>"),
+      nextBtn = helperFunctions.generateElement('button',"nextBtn","shiftBtn","<i class='fa-solid fa-chevron-right'></i>")
     ){
       slideControls = helperFunctions.appendChildren(slideControls, prevBtn, nextBtn);
       return slideControls;
@@ -215,19 +215,18 @@ export const specialFeatures = {
       seriesName,
       imgInfo,
       counter,
+      div = helperFunctions.generateElement('div','figureHolder'),
       article = helperFunctions.generateElement('article',`gallery${counter}`, 'slide')
     ){
       console.log(seriesName);
       let h2 = helperFunctions.generateElement('h2',"","",seriesName);
-      article.appendChild(h2);
+      article = helperFunctions.appendChildren(article, h2, div);
 
       imgInfo.forEach(item => {
-        // console.log(item);
         let figure = helperFunctions.generateElement('figure');
         let img_element = helperFunctions.generateElement('img',"","","",`../${item.thumbNail}`);
-        // article = helperFunctions.appendChildren(article, h2);
-        article = helperFunctions.nestChildren(article, figure, img_element);
-        console.log(article);
+
+        div = helperFunctions.nestChildren(div, figure, img_element);
         figure.addEventListener('click',()=>{})
       });
 
