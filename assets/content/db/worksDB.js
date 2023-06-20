@@ -51,6 +51,36 @@ export const worksDB = {
         "thumbNail":"assets/content/imgs/thumbnails/Belgariad/thmb_belgariad6.webp",
         "mainImg":"assets/content/imgs/previewPics/Belgariad/belgariad6.webp",
       },
+      {
+        "name":"belgariad",
+        "thumbNail":"assets/content/imgs/thumbnails/Belgariad/thmb_belgariad1.webp",
+        "mainImg":"assets/content/imgs/previewPics/Belgariad/belgariad1.webp",
+      },
+      {
+        "name":"belgariad",
+        "thumbNail":"assets/content/imgs/thumbnails/Belgariad/thmb_belgariad2.webp",
+        "mainImg":"assets/content/imgs/previewPics/Belgariad/belgariad2.webp",
+      },
+      {
+        "name":"belgariad",
+        "thumbNail":"assets/content/imgs/thumbnails/Belgariad/thmb_belgariad3.webp",
+        "mainImg":"assets/content/imgs/previewPics/Belgariad/belgariad3.webp",
+      },
+      {
+        "name":"belgariad",
+        "thumbNail":"assets/content/imgs/thumbnails/Belgariad/thmb_belgariad4.webp",
+        "mainImg":"assets/content/imgs/previewPics/Belgariad/belgariad4.webp",
+      },
+      {
+        "name":"belgariad",
+        "thumbNail":"assets/content/imgs/thumbnails/Belgariad/thmb_belgariad5.webp",
+        "mainImg":"assets/content/imgs/previewPics/Belgariad/belgariad5.webp",
+      },
+      {
+        "name":"belgariad",
+        "thumbNail":"assets/content/imgs/thumbnails/Belgariad/thmb_belgariad6.webp",
+        "mainImg":"assets/content/imgs/previewPics/Belgariad/belgariad6.webp",
+      },
     ]
   },
   {
@@ -124,6 +154,66 @@ export const worksDB = {
       },
       {
         "name":"time",
+        "thumbNail":"assets/content/imgs/thumbnails/Belgariad/thmb_belgariad6.webp",
+        "mainImg":"assets/content/imgs/previewPics/Belgariad/belgariad6.webp",
+      },
+      {
+        "name":"belgariad",
+        "thumbNail":"assets/content/imgs/thumbnails/Belgariad/thmb_belgariad1.webp",
+        "mainImg":"assets/content/imgs/previewPics/Belgariad/belgariad1.webp",
+      },
+      {
+        "name":"belgariad",
+        "thumbNail":"assets/content/imgs/thumbnails/Belgariad/thmb_belgariad2.webp",
+        "mainImg":"assets/content/imgs/previewPics/Belgariad/belgariad2.webp",
+      },
+      {
+        "name":"belgariad",
+        "thumbNail":"assets/content/imgs/thumbnails/Belgariad/thmb_belgariad3.webp",
+        "mainImg":"assets/content/imgs/previewPics/Belgariad/belgariad3.webp",
+      },
+      {
+        "name":"belgariad",
+        "thumbNail":"assets/content/imgs/thumbnails/Belgariad/thmb_belgariad4.webp",
+        "mainImg":"assets/content/imgs/previewPics/Belgariad/belgariad4.webp",
+      },
+      {
+        "name":"belgariad",
+        "thumbNail":"assets/content/imgs/thumbnails/Belgariad/thmb_belgariad5.webp",
+        "mainImg":"assets/content/imgs/previewPics/Belgariad/belgariad5.webp",
+      },
+      {
+        "name":"belgariad",
+        "thumbNail":"assets/content/imgs/thumbnails/Belgariad/thmb_belgariad6.webp",
+        "mainImg":"assets/content/imgs/previewPics/Belgariad/belgariad6.webp",
+      },
+      {
+        "name":"belgariad",
+        "thumbNail":"assets/content/imgs/thumbnails/Belgariad/thmb_belgariad1.webp",
+        "mainImg":"assets/content/imgs/previewPics/Belgariad/belgariad1.webp",
+      },
+      {
+        "name":"belgariad",
+        "thumbNail":"assets/content/imgs/thumbnails/Belgariad/thmb_belgariad2.webp",
+        "mainImg":"assets/content/imgs/previewPics/Belgariad/belgariad2.webp",
+      },
+      {
+        "name":"belgariad",
+        "thumbNail":"assets/content/imgs/thumbnails/Belgariad/thmb_belgariad3.webp",
+        "mainImg":"assets/content/imgs/previewPics/Belgariad/belgariad3.webp",
+      },
+      {
+        "name":"belgariad",
+        "thumbNail":"assets/content/imgs/thumbnails/Belgariad/thmb_belgariad4.webp",
+        "mainImg":"assets/content/imgs/previewPics/Belgariad/belgariad4.webp",
+      },
+      {
+        "name":"belgariad",
+        "thumbNail":"assets/content/imgs/thumbnails/Belgariad/thmb_belgariad5.webp",
+        "mainImg":"assets/content/imgs/previewPics/Belgariad/belgariad5.webp",
+      },
+      {
+        "name":"belgariad",
         "thumbNail":"assets/content/imgs/thumbnails/Belgariad/thmb_belgariad6.webp",
         "mainImg":"assets/content/imgs/previewPics/Belgariad/belgariad6.webp",
       },

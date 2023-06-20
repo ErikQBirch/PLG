@@ -163,7 +163,7 @@ export const specialFeatures = {
           clearInterval(this.intervalFunction);
         });
         carousel.addEventListener('mouseleave', ()=>{
-          this.startSlides(slideHolder,slideWidth);
+          // this.startSlides(slideHolder,slideWidth);
         });
         document.addEventListener('touchstart', (e) => { // SWIPE SCREEN
           this.touchstartX = e.changedTouches[0].screenX;

@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
-    margin: 5rem auto 1rem auto;
+    margin: 7.5rem auto 1rem auto;
   }
   body main section#carousel_element #carousel_nav button,
   body main section#carousel_element > div.filter #carousel_nav button {
@@ -86,6 +86,11 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     flex-direction: column;
     align-items: center;
     overflow-y: scroll;
+    scrollbar-width: none;
+  }
+  body main section#carousel_element #carousel #slideHolder article::-webkit-scrollbar,
+  body main section#carousel_element > div.filter #carousel #slideHolder article::-webkit-scrollbar {
+    display: none;
   }
   body main section#carousel_element #carousel #slideHolder article h2,
   body main section#carousel_element > div.filter #carousel #slideHolder article h2 {
@@ -107,6 +112,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     height: 100%;
     display: flex;
     border: 1px solid rgb(0, 175, 255);
+    cursor: pointer;
   }
   body main section#carousel_element #carousel #slideHolder article div#figureHolder figure,
   body main section#carousel_element > div.filter #carousel #slideHolder article div#figureHolder figure {
@@ -178,6 +184,11 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   body header#navSection div#menu-btn {
     display: flex;
   }
+  body main section#carousel_element #carousel_nav,
+  body main section#carousel_element > div.filter #carousel_nav {
+    width: 50%;
+    margin-top: 5rem;
+  }
   body main section#carousel_element #carousel #slideHolder article div#figureHolder,
   body main section#carousel_element > div.filter #carousel #slideHolder article div#figureHolder {
     display: grid;
@@ -187,6 +198,76 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   body main section#carousel_element #carousel #slideHolder article div#figureHolder figure,
   body main section#carousel_element > div.filter #carousel #slideHolder article div#figureHolder figure {
     width: 80%;
+  }
+  body main section#carousel_element #slideControls button,
+  body main section#carousel_element > div.filter #slideControls button {
+    cursor: pointer;
+  }
+}
+@media only all and (min-width: 992px) {
+  body header#navSection div#menu-btn {
+    display: flex;
+  }
+  body main section#carousel_element #carousel #slideHolder article div#figureHolder,
+  body main section#carousel_element > div.filter #carousel #slideHolder article div#figureHolder {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  body main section#carousel_element #carousel #slideHolder article div#figureHolder figure,
+  body main section#carousel_element > div.filter #carousel #slideHolder article div#figureHolder figure {
+    width: 90%;
+    height: 90%;
+  }
+  body main section#carousel_element #slideControls button,
+  body main section#carousel_element > div.filter #slideControls button {
+    cursor: pointer;
+  }
+}
+@media only all and (min-width: 1200px) {
+  body header#navSection div#menu-btn {
+    display: flex;
+  }
+  body main section#carousel_element,
+  body main section#carousel_element > div.filter {
+    height: 92.5vh;
+    bottom: 0;
+    top: initial;
+  }
+  body main section#carousel_element #carousel_nav,
+  body main section#carousel_element > div.filter #carousel_nav {
+    margin-top: 0rem;
+    width: 75%;
+    justify-content: center;
+  }
+  body main section#carousel_element #carousel_nav button,
+  body main section#carousel_element > div.filter #carousel_nav button {
+    margin: 0 1rem;
+  }
+  body main section#carousel_element #carousel,
+  body main section#carousel_element > div.filter #carousel {
+    width: 85vw;
+    z-index: 4;
+  }
+  body main section#carousel_element #carousel #slideHolder article,
+  body main section#carousel_element > div.filter #carousel #slideHolder article {
+    width: 85vw;
+  }
+  body main section#carousel_element #carousel #slideHolder article div#figureHolder,
+  body main section#carousel_element > div.filter #carousel #slideHolder article div#figureHolder {
+    width: 85vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  body main section#carousel_element #carousel #slideHolder article div#figureHolder figure,
+  body main section#carousel_element > div.filter #carousel #slideHolder article div#figureHolder figure {
+    width: 90%;
+    height: 90%;
+  }
+  body main section#carousel_element #slideControls,
+  body main section#carousel_element > div.filter #slideControls {
+    width: 95%;
+    position: absolute;
+    top: 50%;
+    left: 2.5%;
+    right: 2.5rem;
   }
   body main section#carousel_element #slideControls button,
   body main section#carousel_element > div.filter #slideControls button {

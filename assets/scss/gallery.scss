@@ -133,7 +133,7 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
       }
       section#carousel_element,
       section#carousel_element > div.filter{
-        // @include minCarousel;
+        @include minCarousel;
 
 
         div#carousel{
@@ -195,6 +195,7 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
     }
     header#navSection{
       div#menu-btn{
+        display:flex;
       }
     }
     main{
@@ -210,7 +211,7 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
       }
       section#carousel_element,
       section#carousel_element > div.filter{
-        // @include medCarousel;
+        @include medCarousel;
 
 
         div#carousel{
