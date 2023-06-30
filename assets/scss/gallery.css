@@ -124,6 +124,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   body main section#carousel_element > div.filter #carousel #slideHolder article div#figureHolder figure:focus {
     border: 2px solid white;
     box-shadow: 0 0 0.5rem rgb(0, 175, 255);
+    border-radius: 5px;
   }
   body main section#carousel_element #slideControls,
   body main section#carousel_element > div.filter #slideControls {
@@ -179,6 +180,46 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   body main section#carousel_element > div.filter #carousel_note:focus {
     color: rgb(236, 145, 74);
   }
+  body #previewPopUp {
+    color: rgb(0, 175, 255);
+    text-shadow: 0 0 0.5rem rgb(0, 175, 255);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    z-index: 4;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+  body #previewPopUp div {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  body #previewPopUp div button {
+    color: rgb(0, 175, 255);
+    text-shadow: 0 0 0.5rem rgb(0, 175, 255);
+    background-color: transparent;
+    border: none;
+    font-size: 1.25rem;
+  }
+  body #previewPopUp div button:hover, body #previewPopUp div button:active, body #previewPopUp div button:focus {
+    color: white;
+  }
+  body #previewPopUp figure {
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 0 1rem rgb(0, 175, 255);
+  }
+  body #previewPopUp figure img {
+    display: flex;
+    width: 150%;
+    height: 100%;
+  }
 }
 @media only all and (min-width: 760px) {
   body header#navSection div#menu-btn {
@@ -202,6 +243,26 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   body main section#carousel_element #slideControls button,
   body main section#carousel_element > div.filter #slideControls button {
     cursor: pointer;
+  }
+  body #previewPopUp div {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+  }
+  body #previewPopUp div button {
+    color: rgb(0, 175, 255);
+    text-shadow: 0 0 0.5rem rgb(0, 175, 255);
+    background-color: transparent;
+    border: none;
+    font-size: 1.25rem;
+  }
+  body #previewPopUp figure {
+    width: 60%;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+  body #previewPopUp figure img {
+    width: 100%;
   }
 }
 @media only all and (min-width: 992px) {

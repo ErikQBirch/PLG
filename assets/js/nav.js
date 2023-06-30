@@ -17,14 +17,14 @@ export const navigation = {
     return ul_tag;
   },
   closePopup: function(
+    main = document.querySelector('main'),
     header = document.querySelector('header'),
     footer = document.querySelector('footer'),
-    background = document.querySelector('#background'),
     popup = document.querySelector('#popupMolecule')
   ){
     header.classList.remove('clear');
         footer.style.display = "flex";
-        background.style.filter = "none";
+        main.style.filter = "none";
         popup.remove();
   },
   getNavigationPackage: function(){
@@ -89,8 +89,8 @@ export const navigation = {
     return nav_tag;
   },
   openPopup: function(
+    body = document.querySelector('body'),
     main = document.querySelector('main'),
-    firstChild = main.firstElementChild,
     popup = this.popupMolecule(),
     header = document.querySelector('header'),
     footer = document.querySelector('footer'),
@@ -98,7 +98,7 @@ export const navigation = {
   ){
       header.classList.add('clear');
       footer.style.display = "none";
-      background.style.filter = "blur(10px)";
+      main.style.filter = "blur(10px)";
 
       worksDB.array.forEach(obj => {
         console.log(obj.seriesName)
@@ -108,7 +108,7 @@ export const navigation = {
       });
 
 
-      main.insertBefore(popup, firstChild);
+      body.insertBefore(popup, main);
   },
   optionListMolecule:function(
     obj,

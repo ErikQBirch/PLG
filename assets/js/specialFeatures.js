@@ -66,13 +66,18 @@ export const specialFeatures = {
             }
             break;
           case "gallery":
-            console.log(item);
+            // console.log(item);
             returnedSlide = this.singleGallery(item.seriesName, item.imgs, counter);
             break;
           default:
             break;
         }
         return returnedSlide;
+    },
+    closePopUp:function(section,main,header){
+      section.remove();
+      main.style.filter = "none";
+      header.style.filter = "none";
     },
     functionality: {
       index: 1,
@@ -94,29 +99,67 @@ export const specialFeatures = {
 
         target = document.querySelector('.currentSlide').id;
         idLength = target.length
-        console.log(target, target.substring(idLength-1, idLength));
+        // console.log(target, target.substring(idLength-1, idLength));
         document.getElementById(target.substring(idLength-1, idLength)).classList.add('currentBtn');
         
       },
-      checkDirection: function(slideHolder, slideWidth) {
+      checkDirection: function(slideHolder, slideWidth, slideArray) {
         clearInterval(this.intervalFunction);
         if (this.touchendX < this.touchstartX) {
-          this.moveToNextSlide(slideHolder,slideWidth);
+          console.log(this.index);
+          if (this.index == slideArray.length-2){return}
+          else {
+            this.moveToNextSlide(slideHolder,slideWidth);
+            this.checkIndexAndButtons(prevBtn,nextBtn, slideArray);
+          }
         }
         if (this.touchendX > this.touchstartX) {
-          this.moveToPrevSlide(slideHolder,slideWidth);
+          console.log(this.index);
+          if (this.index == 1){return}
+          else {
+            this.moveToPrevSlide(slideHolder,slideWidth);
+            this.checkIndexAndButtons(prevBtn,nextBtn, slideArray);
+          }
         }
         // this.startSlides(slideHolder,slideWidth);
       },
+      checkIndexAndButtons: function(prevBtn,nextBtn, slideArray){
+        // console.log(this.index);
+        if (this.index == slideArray.length-2){
+          nextBtn.style.pointerEvents = "none";
+          nextBtn.style.opacity = "0"; 
+          prevBtn.style.pointerEvents = "initial";
+          prevBtn.style.opacity = "1"; 
+        }
+        else if (this.index == 1){
+          prevBtn.style.pointerEvents = "none";
+          prevBtn.style.opacity = "0"; 
+          nextBtn.style.pointerEvents = "initial";
+          nextBtn.style.opacity = "1";
+        }
+        else {
+          prevBtn.style.pointerEvents = "initial";
+          prevBtn.style.opacity = "1"; 
+          nextBtn.style.pointerEvents = "initial";
+          nextBtn.style.opacity = "1";
+        }
+      },
       getSlides: function(){return document.querySelectorAll('.slide')},   
+      moveSlides: function(
+        slideHolder,
+        slideWidth,
+        numb
+      ){
+        slideHolder.style.transform = `translateX(${-slideWidth * numb}px`;
+        // slideHolder.style.transition = '0.75s';
+      },
       moveToNextSlide: function(slideHolder, slideWidth){
         let slideArray = this.getSlides();
         if (this.index >= (slideArray.length-1)){return};
-        
         this.index++;
         this.assignCurrentSlide(slideArray[this.index], document.querySelector('.currentSlide'),slideArray);
         
-        slideHolder.style.transform = `translate(${-slideWidth*this.index}px)`;
+        this.moveSlides(slideHolder, slideWidth, this.index);
         slideHolder.style.transition = '0.75s';
       },
       moveToPrevSlide: function(slideHolder, slideWidth){
@@ -125,8 +168,14 @@ export const specialFeatures = {
         this.index--;
         
         this.assignCurrentSlide(slideArray[this.index], document.querySelector('.currentSlide'),slideArray);
-        slideHolder.style.transform = `translate(${-slideWidth*this.index}px)`;
+        this.moveSlides(slideHolder, slideWidth, this.index);
         slideHolder.style.transition = '0.75s';
+      },
+      startSlides: function(slideHolder, slideWidth){
+        this.intervalFunction = setInterval(()=>{
+          this.moveToNextSlide(slideHolder,slideWidth);
+        }, this.interval);
+        return;
       },
       setUp: function(
         carousel = document.getElementById('carousel'),
@@ -137,34 +186,40 @@ export const specialFeatures = {
         firstClone = slideArray[0].cloneNode(true),
         lastClone = slideArray[slideArray.length-1].cloneNode(true),
         slideWidth = slideArray[this.index].clientWidth,
-        slideNav_array = document.querySelectorAll('.slideBtn')
+        slideNav_array = document.querySelectorAll('.slideBtn'),
+        currentNumb = 2
       ){
         firstClone.id = "firstClone";
         lastClone.id = "lastClone";
         slideHolder.append(firstClone);
         slideHolder.prepend(lastClone);
-        slideArray[0].classList.add('currentSlide');
-        slideNav_array[0].classList.add('currentBtn');
-        slideHolder.style.transform = `translateX(${-slideWidth * this.index}px)`;
-        
-        // this.startSlides(slideHolder, slideWidth);
+        slideArray[currentNumb].classList.add('currentSlide');
+        slideNav_array[currentNumb].classList.add('currentBtn');
+        this.moveSlides(slideHolder, slideWidth, this.index);
         this.theEvents(carousel, slideHolder,nextBtn,prevBtn,slideWidth,slideNav_array)
 
       },
-      startSlides: function(slideHolder, slideWidth){
-        this.intervalFunction = setInterval(()=>{
-          this.moveToNextSlide(slideHolder,slideWidth);
-        }, this.interval);
-        return;
+      startFromUrl(
+        slideHolder,
+        slideWidth,
+        prevBtn,
+        nextBtn,
+        series = parseFloat(helperFunctions.getSingleUrlParam('id'))+1,
+        slideArray = this.getSlides(),
+      ){
+        console.log(series);
+        if (!Number.isInteger(series)){
+          series = 1;
+        }
+        this.index = series;
+        console.log(this.index);
+        console.log(slideArray[this.index])
+        this.assignCurrentSlide(slideArray[this.index], document.querySelector('.currentSlide'),slideArray)
+        this.moveSlides(slideHolder, slideWidth, this.index);
+        this.checkIndexAndButtons(prevBtn,nextBtn, slideArray);
+
       },
-      theEvents : function(carousel, slideHolder,nextBtn,prevBtn, slideWidth, slideNav_array){
-        carousel.addEventListener('mouseenter',()=>{
-          
-          clearInterval(this.intervalFunction);
-        });
-        carousel.addEventListener('mouseleave', ()=>{
-          // this.startSlides(slideHolder,slideWidth);
-        });
+      theEvents : function(carousel, slideHolder,nextBtn,prevBtn, slideWidth, slideNav_array, slideArray = this.getSlides()){
         document.addEventListener('touchstart', (e) => { // SWIPE SCREEN
           this.touchstartX = e.changedTouches[0].screenX;
         });
@@ -174,22 +229,31 @@ export const specialFeatures = {
           slideWidth = this.getSlides()[this.index].clientWidth,
           ) => { 
           this.touchendX = e.changedTouches[0].screenX
-          this.checkDirection(slideHolder, slideWidth);
+          this.checkDirection(slideHolder, slideWidth, slideArray);
         });
-        nextBtn.addEventListener('click',()=>{this.moveToNextSlide(slideHolder, slideWidth)});
-        prevBtn.addEventListener('click',()=>{this.moveToPrevSlide(slideHolder, slideWidth)});
+        nextBtn.addEventListener('click',()=>{
+          this.moveToNextSlide(slideHolder, slideWidth);
+          this.checkIndexAndButtons(prevBtn,nextBtn, slideArray);
+        }
+          );
+        prevBtn.addEventListener('click',()=>{
+          this.moveToPrevSlide(slideHolder, slideWidth);
+          this.checkIndexAndButtons(prevBtn,nextBtn, slideArray);
+        });
         slideHolder.addEventListener('transitionend',()=>{
           let slideArray = this.getSlides();
           
           if (slideArray[this.index].id == firstClone.id){
             slideHolder.style.transition = "none";
             this.index = 1;
-            slideHolder.style.transform = `translateX(${-slideWidth * this.index}px`;
+            this.moveSlides(slideHolder, slideWidth, this.index);
+            // slideHolder.style.transform = `translateX(${-slideWidth * this.index}px`;
           }
           if (slideArray[this.index].id == lastClone.id){
             slideHolder.style.transition = "none";
             this.index = slideArray.length - 2;
-            slideHolder.style.transform = `translateX(${-slideWidth * this.index}px`;
+            this.moveSlides(slideHolder, slideWidth, this.index);
+            // slideHolder.style.transform = `translateX(${-slideWidth * this.index}px`;
           }
         });
         slideHolder.addEventListener('click',(e)=>{
@@ -200,16 +264,42 @@ export const specialFeatures = {
           }
         });
 
+
+        this.startFromUrl(slideHolder, slideWidth, prevBtn, nextBtn);
+
         for (let slideBtn of slideNav_array){
           slideBtn.addEventListener('click',()=>{
             let slideArray = this.getSlides();
             this.index = parseFloat(slideBtn.id) + 1;
             this.assignCurrentSlide(slideArray[this.index], document.querySelector('.currentSlide'),slideArray)
-            slideHolder.style.transform = `translateX(${-slideWidth * this.index}px`;
+            this.moveSlides(slideHolder, slideWidth, this.index);
+            // slideHolder.style.transform = `translateX(${-slideWidth * this.index}px`;
             slideHolder.style.transition = '0.75s';
+            this.checkIndexAndButtons(prevBtn,nextBtn, slideArray);
           })
         }
       },
+    },
+    popUp: function(
+      imageInfo,
+      section = helperFunctions.generateElement('section',"previewPopUp"),
+      body = document.querySelector('body'),
+      main = document.querySelector('main'),
+      header = document.querySelector('header'),
+      figure = helperFunctions.generateElement('figure'),
+      img = helperFunctions.generateElement('img',"","","",`../${imageInfo.mainImg}`),
+      topStuff = helperFunctions.generateElement('div',""),
+      h3 = helperFunctions.generateElement('h3',"","",imageInfo.name),
+      exitBtn = helperFunctions.generateElement('button',"","","X")
+    ){
+      topStuff = helperFunctions.appendChildren(topStuff, h3, exitBtn);
+      section.appendChild(topStuff);
+      section = helperFunctions.nestChildren(section, figure, img);
+      body.insertBefore(section, main);
+      main.style.filter = "blur(10px) brightness(30%)";
+      header.style.filter = "blur(10px) brightness(30%)";
+
+      exitBtn.addEventListener('click',()=>{ this.closePopUp(section,main,header)}); 
     },
     singleGallery: function(
       seriesName,
@@ -218,7 +308,7 @@ export const specialFeatures = {
       div = helperFunctions.generateElement('div','figureHolder'),
       article = helperFunctions.generateElement('article',`gallery${counter}`, 'slide')
     ){
-      console.log(seriesName);
+      // console.log(seriesName);
       let h2 = helperFunctions.generateElement('h2',"","",seriesName);
       article = helperFunctions.appendChildren(article, h2, div);
 
@@ -227,7 +317,9 @@ export const specialFeatures = {
         let img_element = helperFunctions.generateElement('img',"","","",`../${item.thumbNail}`);
 
         div = helperFunctions.nestChildren(div, figure, img_element);
-        figure.addEventListener('click',()=>{})
+        figure.addEventListener('click',()=>{
+          this.popUp(item);
+        })
       });
 
 

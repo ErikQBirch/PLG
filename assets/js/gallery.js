@@ -27,7 +27,7 @@ const pageStuff = {
     // body.appendChild(main_tag);
     body.insertBefore(main_tag, footer);
     specialFeatures.carousel.functionality.setUp();
-    // theEvents.backgroundEffect();
+    this.theEvents.setSeries();
   },
   main: function(
     main_tag = helperFunctions.generateElement('main'),
@@ -44,8 +44,13 @@ const pageStuff = {
     main_tag.appendChild(section);
     // main_tag.appendChild(carousel_organism_variable);
     return main_tag;
-  },
+  }, 
+  theEvents: {
+    setSeries: function(){
 
+      console.log(document.querySelector('.currentBtn'))
+    },
+  }
 }
 
 
