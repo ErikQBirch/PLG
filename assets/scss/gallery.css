@@ -116,6 +116,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   }
   body main section#carousel_element #carousel #slideHolder article div#figureHolder figure,
   body main section#carousel_element > div.filter #carousel #slideHolder article div#figureHolder figure {
+    width: 80%;
     margin: 0.5rem auto;
   }
   body main section#carousel_element #carousel #slideHolder article div#figureHolder figure:hover, body main section#carousel_element #carousel #slideHolder article div#figureHolder figure:active, body main section#carousel_element #carousel #slideHolder article div#figureHolder figure:focus,
@@ -170,15 +171,8 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     width: fit-content;
     color: white;
     width: 100%;
-  }
-  body main section#carousel_element #carousel_note:hover,
-  body main section#carousel_element > div.filter #carousel_note:hover {
-    color: rgb(0, 152, 219);
-  }
-  body main section#carousel_element #carousel_note:active, body main section#carousel_element #carousel_note:focus,
-  body main section#carousel_element > div.filter #carousel_note:active,
-  body main section#carousel_element > div.filter #carousel_note:focus {
-    color: rgb(236, 145, 74);
+    text-shadow: 0 0 0.5rem rgb(0, 175, 255);
+    color: rgb(0, 175, 255);
   }
   body #previewPopUp {
     color: rgb(0, 175, 255);
@@ -195,7 +189,6 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     background-color: rgba(0, 0, 0, 0.25);
   }
   body #previewPopUp div {
-    width: 90%;
     display: flex;
     justify-content: space-between;
     margin-bottom: 1rem;
@@ -211,14 +204,25 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     color: white;
   }
   body #previewPopUp figure {
-    width: 100%;
     overflow: hidden;
     box-shadow: 0 0 1rem rgb(0, 175, 255);
+    display: flex;
+    justify-content: center;
   }
   body #previewPopUp figure img {
     display: flex;
-    width: 150%;
-    height: 100%;
+  }
+  body #previewPopUp.landscape div, body #previewPopUp.landscape figure {
+    width: 95%;
+  }
+  body #previewPopUp.landscape div img, body #previewPopUp.landscape figure img {
+    width: 125%;
+  }
+  body #previewPopUp.portrait div, body #previewPopUp.portrait figure {
+    width: 370px;
+  }
+  body #previewPopUp.portrait div img, body #previewPopUp.portrait figure img {
+    width: 100%;
   }
 }
 @media only all and (min-width: 760px) {
@@ -238,14 +242,14 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   }
   body main section#carousel_element #carousel #slideHolder article div#figureHolder figure,
   body main section#carousel_element > div.filter #carousel #slideHolder article div#figureHolder figure {
-    width: 80%;
+    width: 300px;
+    height: 175px;
   }
   body main section#carousel_element #slideControls button,
   body main section#carousel_element > div.filter #slideControls button {
     cursor: pointer;
   }
   body #previewPopUp div {
-    width: 60%;
     display: flex;
     justify-content: space-between;
   }
@@ -257,11 +261,19 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     font-size: 1.25rem;
   }
   body #previewPopUp figure {
-    width: 60%;
     overflow: hidden;
     border-radius: 5px;
   }
-  body #previewPopUp figure img {
+  body #previewPopUp.landscape div, body #previewPopUp.landscape figure {
+    width: 700px;
+  }
+  body #previewPopUp.landscape div img, body #previewPopUp.landscape figure img {
+    width: 100%;
+  }
+  body #previewPopUp.portrait div, body #previewPopUp.portrait figure {
+    width: 500px;
+  }
+  body #previewPopUp.portrait div img, body #previewPopUp.portrait figure img {
     width: 100%;
   }
 }
@@ -276,11 +288,13 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   body main section#carousel_element #carousel #slideHolder article div#figureHolder figure,
   body main section#carousel_element > div.filter #carousel #slideHolder article div#figureHolder figure {
     width: 90%;
-    height: 90%;
   }
   body main section#carousel_element #slideControls button,
   body main section#carousel_element > div.filter #slideControls button {
     cursor: pointer;
+  }
+  body #previewPopUp.landscape div, body #previewPopUp.landscape figure {
+    width: 900px;
   }
 }
 @media only all and (min-width: 1200px) {
@@ -316,11 +330,6 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   body main section#carousel_element > div.filter #carousel #slideHolder article div#figureHolder {
     width: 85vw;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-  body main section#carousel_element #carousel #slideHolder article div#figureHolder figure,
-  body main section#carousel_element > div.filter #carousel #slideHolder article div#figureHolder figure {
-    width: 90%;
-    height: 90%;
   }
   body main section#carousel_element #slideControls,
   body main section#carousel_element > div.filter #slideControls {

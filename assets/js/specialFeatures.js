@@ -12,6 +12,7 @@ export const specialFeatures = {
       slideHolder = helperFunctions.generateElement('div',"slideHolder"),
       slideControls = this.carousel_slideControls(),
       carousel_nav = helperFunctions.generateElement('div', "carousel_nav"),
+      carousel_note = helperFunctions.generateElement('span',"carousel_note","","Try Scrolling to See More")
       // carousel_note = helperFunctions.generateElement('a',"carousel_note","","See More","../pages/reviews.html")
     ){
       
@@ -25,7 +26,7 @@ export const specialFeatures = {
       });
   
       carousel_tag = helperFunctions.appendChildren(carousel_tag, slideHolder)
-      let carousel = [carousel_nav, carousel_tag, slideControls];
+      let carousel = [carousel_nav, carousel_tag, slideControls, carousel_note];
       return carousel;
   
     },
@@ -298,6 +299,13 @@ export const specialFeatures = {
       body.insertBefore(section, main);
       main.style.filter = "blur(10px) brightness(30%)";
       header.style.filter = "blur(10px) brightness(30%)";
+      
+      if (imageInfo.layout == "portrait"){
+        section.classList.add('portrait')
+      }
+      else {
+        section.classList.add('landscape');
+      }
 
       exitBtn.addEventListener('click',()=>{ this.closePopUp(section,main,header)}); 
     },
