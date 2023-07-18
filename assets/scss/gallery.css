@@ -165,7 +165,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     text-align: center;
     margin: 0 auto;
     width: 100%;
-    margin: 1rem auto;
+    margin: 0.5rem auto;
     padding: 1rem;
     width: -moz-fit-content;
     width: fit-content;

@@ -34,6 +34,29 @@ export const helperFunctions = {
     }
     return element;
   },
+  findParent: function( //NEEDS IMPROVEMENT
+    targetParent,
+    potentialChild,
+    parent = potentialChild.parentElement,
+    stop=false){
+
+      console.log(targetParent);
+      while(stop == false){{
+        if(parent == targetParent){
+        stop = true;
+      }
+      else if (parent.tagName == "HTML"){
+        stop = true;
+      }
+      else {
+        parent = parent.parentElement;
+      } 
+        }
+      }
+
+      console.log(parent, targetParent);
+      return parent;
+  },
   generateElement: function (
     paramElement,
     paramId = '',

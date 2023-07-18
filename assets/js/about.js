@@ -9,12 +9,15 @@ const pageStuff = {
     figure_tag = helperFunctions.generateElement('figure'),
     img_tag1 = helperFunctions.generateElement('img',"","mobileImg","","../assets/content/imgs/about_mobile.webp"),
     img_tag2 = helperFunctions.generateElement('img',"","deskImg","","../assets/content/imgs/about.webp"),
-    filter_tag = helperFunctions.generateElement('div',"filter_tag")
+    content_tag = helperFunctions.generateElement('div',"content_tag"),
+    content1=helperFunctions.generateElement('p',"content1","","LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, "),
+    content2=helperFunctions.generateElement('p',"content2","","LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, "),
+    contentPhoto=helperFunctions.generateElement('img',"contentPhoto","","","../assets/content/imgs/PLG_photo.webp"),
     ){
-
       
+      content_tag = helperFunctions.appendChildren(content_tag, contentPhoto,content1,content2)
       figure_tag = helperFunctions.appendChildren(figure_tag, img_tag1, img_tag2);
-      background = helperFunctions.appendChildren(background, filter_tag, figure_tag);
+      background = helperFunctions.appendChildren(background, content_tag, figure_tag);
 
       return background;
     },
@@ -23,26 +26,14 @@ const pageStuff = {
     main_tag = this.main(),
     footer = document.querySelector('footer')
   ){
-    // body.appendChild(nav_tag); 
-    // body.appendChild(main_tag);
     body.insertBefore(main_tag, footer);
-    specialFeatures.carousel.functionality.setUp();
     this.theEvents.setSeries();
   },
   main: function(
     main_tag = helperFunctions.generateElement('main'),
     background = this.background(),
-    // section = helperFunctions.generateElement('section',"carousel_element"),
-    // carousel_organism_variable = specialFeatures.carousel.carousel_organism(worksDB.contentType, worksDB.name, worksDB.array)
   ){
     main_tag = helperFunctions.appendChildren(main_tag, background);
-    // console.log(carousel_organism_variable);
-    // carousel_organism_variable.forEach(element => {
-    //   section.appendChild(element);
-      
-    // });
-    // main_tag.appendChild(section);
-    // main_tag.appendChild(carousel_organism_variable);
     return main_tag;
   }, 
   theEvents: {

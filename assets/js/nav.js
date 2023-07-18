@@ -101,7 +101,7 @@ export const navigation = {
       main.style.filter = "blur(10px)";
 
       worksDB.array.forEach(obj => {
-        console.log(obj.seriesName)
+        // console.log(obj.seriesName)
         let option = this.optionListMolecule(obj);
         popup.children[1].appendChild(option);
         // console.log(popup.children[1]);w
@@ -123,7 +123,7 @@ export const navigation = {
     optionLink = helperFunctions.appendChildren(optionLink, seriesName, count);
     option.appendChild(optionLink);
     
-    console.log(this.pathAdjuster)
+    // console.log(this.pathAdjuster)
     return option;
   },
   popupMolecule: function(
@@ -136,11 +136,11 @@ export const navigation = {
     btnHolder.appendChild(xBtn);
     popup = helperFunctions.appendChildren(popup, span, optionHolder, btnHolder);
 
-    xBtn.addEventListener('click', (e,
-       )=>{
-        this.closePopup();
-    });
 
+   popup .addEventListener('click', (e,
+      )=>{
+       this.closePopup();
+   });
     return popup;
   },
   setGlobalVariables: function(){
