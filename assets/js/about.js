@@ -6,9 +6,9 @@ import { worksDB } from "../content/db/worksDB.js";
 const pageStuff = {
   background: function(
     background = helperFunctions.generateElement('section',"background"),
-    figure_tag = helperFunctions.generateElement('figure'),
-    img_tag1 = helperFunctions.generateElement('img',"","mobileImg","","../assets/content/imgs/about_mobile.webp"),
-    img_tag2 = helperFunctions.generateElement('img',"","deskImg","","../assets/content/imgs/about.webp"),
+    figure_tag = helperFunctions.generateElement('figure','background_figure'),
+    img_tag1 = helperFunctions.generateElement('img',"","mobileImg","","../assets/content/imgs/about_mobile (1).webp"),
+    img_tag2 = helperFunctions.generateElement('img',"","deskImg","","../assets/content/imgs/about (1).webp"),
     content_tag = helperFunctions.generateElement('div',"content_tag"),
     content1=helperFunctions.generateElement('p',"content1","","LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, "),
     content2=helperFunctions.generateElement('p',"content2","","LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, LOTS of Text, "),

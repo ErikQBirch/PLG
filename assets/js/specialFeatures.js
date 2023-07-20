@@ -307,7 +307,7 @@ export const specialFeatures = {
         section.classList.add('landscape');
       }
 
-      exitBtn.addEventListener('click',()=>{ this.closePopUp(section,main,header)}); 
+      section.addEventListener('click',()=>{ this.closePopUp(section,main,header)}); 
     },
     singleGallery: function(
       seriesName,
