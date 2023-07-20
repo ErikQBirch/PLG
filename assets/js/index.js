@@ -36,12 +36,16 @@ const theEvents = {
     sideMenu = document.querySelector('#sideMenu'),
     hamburger_tag = document.querySelector('#menu-btn'),
     burgerBtn = hamburger_tag.children[0],
-    xBtn = hamburger_tag.children[1]
+    xBtn = hamburger_tag.children[1],
+    
   ){
     hamburger_tag.addEventListener('click',()=>{
+      let main = document.querySelector('main')
       burgerBtn.classList.toggle('faded');
       xBtn.classList.toggle('faded');
       sideMenu.classList.toggle('closed');
+      main.classList.toggle('blur');
+      console.log(main)
     })
   }
 }

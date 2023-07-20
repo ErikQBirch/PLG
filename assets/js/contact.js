@@ -35,7 +35,7 @@ const pageStuff = {
     side2 = helperFunctions.generateElement('div',"side2"),
     h2a = helperFunctions.generateElement('h2',"","","Description"),
     h2b = helperFunctions.generateElement('h2',"","","Common Locations"),
-    descript_a = helperFunctions.generateElement('p',"","","Lots of Text, Lots of Text, Lots of Text, Lots of Text, Lots of Text, Lots of Text, Lots of Text, Lots of Text, Lots of Text, Lots of Text, Lots of Text, Lots of Text, Lots of Text, Lots of Text, Lots of Text, Lots of Text, Lots of Text, Lots of Text, Lots of Text, Lots of Text, Lots of Text, Lots of Text, Lots of Text, "),
+    descript_a = helperFunctions.generateElement('p',"","","Thank you for checking out this website! I hope you enjoyed your experience. Feel free to see more of my works at any of the websites listed below. Reach out to me if you have any questions or have a commission you'd like to offer"),
     descript_b = helperFunctions.generateElement('p',"","","Click links below")
   ){
     side1 = helperFunctions.appendChildren(side1, h1, img);

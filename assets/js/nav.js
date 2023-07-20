@@ -20,12 +20,17 @@ export const navigation = {
     main = document.querySelector('main'),
     header = document.querySelector('header'),
     footer = document.querySelector('footer'),
-    popup = document.querySelector('#popupMolecule')
+    popup = document.querySelector('#popupMolecule'),
+    sideMenu = document.querySelector('section#sideMenu')
   ){
     header.classList.remove('clear');
         footer.style.display = "flex";
-        main.style.filter = "none";
         popup.remove();
+        if (sideMenu.classList.contains('closed')){
+          main.classList.remove('blur') 
+
+        }
+        console.log("close popup");
   },
   getNavigationPackage: function(){
     this.setGlobalVariables();
@@ -98,7 +103,7 @@ export const navigation = {
   ){
       header.classList.add('clear');
       footer.style.display = "none";
-      main.style.filter = "blur(10px)";
+      main.classList.add('blur');
 
       worksDB.array.forEach(obj => {
         // console.log(obj.seriesName)

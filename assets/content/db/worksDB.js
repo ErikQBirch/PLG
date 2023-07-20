@@ -266,7 +266,19 @@ export const worksDB = {
         "thumbNail":"assets/content/imgs/Misc/thmb_misc20.webp",
         "mainImg":"assets/content/imgs/Misc/misc20.webp",
         "layout":"landscape"
-      }
+      },
+      {
+        "name":"Late Night Sketch",
+        "thumbNail":"assets/content/imgs/Misc/thmb_misc21.webp",
+        "mainImg":"assets/content/imgs/Misc/misc21.webp",
+        "layout":"portrait"
+      },
+      {
+        "name":"30 Min.Sketch",
+        "thumbNail":"assets/content/imgs/Misc/thmb_misc22.webp",
+        "mainImg":"assets/content/imgs/Misc/misc22.webp",
+        "layout":"portrait"
+      },
     ]
   },
   {
@@ -487,6 +499,24 @@ export const worksDB = {
         "name":"Fal Dara Fortress - Planning Room (in-scene view)",
         "thumbNail":"assets/content/imgs/Practice/thmb_practice7.webp",
         "mainImg":"assets/content/imgs/Practice/practice7.webp",
+        "layout":"landscape"
+      },
+      {
+        "name":"Pols Kitchen - Belgariad (3/7=4 view)",
+        "thumbNail":"assets/content/imgs/Practice/thmb_practice8.webp",
+        "mainImg":"assets/content/imgs/Practice/practice8.webp",
+        "layout":"landscape"
+      },
+      {
+        "name":"Green Dragon Tavern",
+        "thumbNail":"assets/content/imgs/Practice/thmb_practice9.webp",
+        "mainImg":"assets/content/imgs/Practice/practice9.webp",
+        "layout":"landscape"
+      },
+      {
+        "name":"Fal Dara Fortress - Planning Room (in-scene view)",
+        "thumbNail":"assets/content/imgs/Practice/thmb_practice10.webp",
+        "mainImg":"assets/content/imgs/Practice/practice10.webp",
         "layout":"landscape"
       },
     ]

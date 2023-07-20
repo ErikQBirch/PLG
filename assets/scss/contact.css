@@ -66,6 +66,9 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   body main div#mainContent section#infoArea #side1 h1:before, body main div#mainContent section#infoArea #side1 h1:after {
     opacity: 0;
   }
+  body main div#mainContent section#infoArea #side1 img {
+    border: 2.5px solid rgb(0, 175, 255);
+  }
   body main div#mainContent section#infoArea #side2 {
     display: none;
   }

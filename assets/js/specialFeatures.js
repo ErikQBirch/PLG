@@ -77,8 +77,10 @@ export const specialFeatures = {
     },
     closePopUp:function(section,main,header){
       section.remove();
-      main.style.filter = "none";
-      header.style.filter = "none";
+      main.classList.remove("blarken");
+      header.classList.remove("blarken");
+
+      console.log(main);
     },
     functionality: {
       index: 1,
@@ -297,8 +299,12 @@ export const specialFeatures = {
       section.appendChild(topStuff);
       section = helperFunctions.nestChildren(section, figure, img);
       body.insertBefore(section, main);
-      main.style.filter = "blur(10px) brightness(30%)";
-      header.style.filter = "blur(10px) brightness(30%)";
+      // main.style.filter = "blur(10px) brightness(30%)";
+      // header.style.filter = "blur(10px) brightness(30%)";
+
+      main.classList.add("blarken");
+      header.classList.add("blarken");
+      
       
       if (imageInfo.layout == "portrait"){
         section.classList.add('portrait')

@@ -86,10 +86,21 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
           border:1px solid rgb(0, 175, 255);
         }
         p{
-          
+          overflow-y:scroll; 
+          height: 50vh;
           text-align:left;
           width: 75%;
           margin: 0 auto;
+          &::-webkit-scrollbar{
+            display:none;
+          } 
+          a:link, a:visited{
+            color: rgb(0, 175, 255);
+            text-decoration: none;
+          }
+          a:hover, a:active{
+            color:white;
+          }
         }
       }
     }
@@ -180,7 +191,7 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
         }
       }
       section#infoArea{
-       
+        margin-top: 10rem;
         h1{
           
         }
@@ -193,11 +204,11 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
         }
         h2{}
         hr{
-          width: 80%;
+          width: 40%;
           margin: 1rem auto;
         }
         p{
-          width: 75%;
+          width: 37.5%;
           margin: 0 auto;
         }
       }

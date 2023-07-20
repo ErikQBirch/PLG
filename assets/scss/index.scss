@@ -24,6 +24,11 @@ button{
   }
 }
 
+.blur{
+  filter: blur(10px);
+}
+
+
 
 h1,h2,h3,h4,h5,p,div,article,a,button{
   font-family: Arial, Helvetica, sans-serif;
@@ -409,6 +414,10 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
               background-color: transparent;
               border:none;
               font-size: 1.25rem;
+              &:hover, &:active{
+                text-shadow: 0 0 10px rgb(0, 175, 255);
+                font-style:italic;
+              }
             }
           }
         }
@@ -429,7 +438,6 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
           ul{
             li{
               &:hover,&:active,&:focus{
-
               }
               a, button{
                 &:link, &:visited{

@@ -8,6 +8,10 @@ button:hover, button:active, button:focus {
   cursor: pointer;
 }
 
+.blur {
+  filter: blur(10px);
+}
+
 h1, h2, h3, h4, h5, p, div, article, a, button {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -316,6 +320,10 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     background-color: transparent;
     border: none;
     font-size: 1.25rem;
+  }
+  body header nav#mainNav ul li a:hover, body header nav#mainNav ul li a:active, body header nav#mainNav ul li button:hover, body header nav#mainNav ul li button:active {
+    text-shadow: 0 0 10px rgb(0, 175, 255);
+    font-style: italic;
   }
   body header div#menu-btn {
     display: none;
