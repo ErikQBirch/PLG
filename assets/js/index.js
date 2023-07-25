@@ -5,10 +5,27 @@ const pageStuff = {
   constructHTML: function(
     body = document.querySelector('body'),
     header = this.header(),
-    footer = this.footer()
+    footer = this.footer(),
+    
   ){
     body = helperFunctions.appendChildren(body, header, footer);
+    // this.title();
+    this.favicon()
     theEvents.activateEffects();
+  },
+  favicon: function(
+    favicon = document.querySelector("link[rel~='icon']"),
+    pathAdjuster = helperFunctions.getPathAdjuster(navigation.pageList)
+  ){ 
+    // console.log("favicon",favicon);
+    // console.log(pathAdjuster);
+    if (!favicon) {
+        favicon = document.createElement('link');
+        favicon.rel = 'icon';
+        document.getElementsByTagName('head')[0].appendChild(favicon);
+    }
+    favicon.href = `${pathAdjuster[0]}assets/content/imgs/PLG_icon.ico`;
+    // console.log(favicon);
   },
   footer: function(
     footer = helperFunctions.generateElement('footer',"","","<span>Erik Q. Birch | ©2023 | Artisan Web Designs™</span>")
@@ -27,6 +44,15 @@ const pageStuff = {
     header = helperFunctions.appendChildren(header, logo, nav, hamburger_atom, sideNav);
     return header;
   },
+  title: function(currentPg = navigation.currentPage){
+    if (currentPg == "index"){
+      document.title = `Paulo Galamgam`
+    }
+    else {
+      console.log(helperFunctions.camelize(currentPg))
+      document.title = `Paulo Galamgam | ${helperFunctions.camelize(currentPg)}`
+    }
+  }
 }
 const theEvents = {
   activateEffects: function(){

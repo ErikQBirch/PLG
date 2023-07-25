@@ -36,7 +36,7 @@ const pageStuff = {
     carousel_organism_variable = specialFeatures.carousel.carousel_organism(worksDB.contentType, worksDB.name, worksDB.array)
   ){
     main_tag = helperFunctions.appendChildren(main_tag, background);
-    console.log(carousel_organism_variable);
+    // console.log(carousel_organism_variable);
     carousel_organism_variable.forEach(element => {
       section.appendChild(element);
       
@@ -48,7 +48,7 @@ const pageStuff = {
   theEvents: {
     setSeries: function(){
 
-      console.log(document.querySelector('.currentBtn'))
+      // console.log(document.querySelector('.currentBtn'))
     },
   }
 }

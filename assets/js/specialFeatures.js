@@ -80,7 +80,7 @@ export const specialFeatures = {
       main.classList.remove("blarken");
       header.classList.remove("blarken");
 
-      console.log(main);
+      // console.log(main);
     },
     functionality: {
       index: 1,
@@ -109,7 +109,7 @@ export const specialFeatures = {
       checkDirection: function(slideHolder, slideWidth, slideArray) {
         clearInterval(this.intervalFunction);
         if (this.touchendX < this.touchstartX) {
-          console.log(this.index);
+          // console.log(this.index);
           if (this.index == slideArray.length-2){return}
           else {
             this.moveToNextSlide(slideHolder,slideWidth);
@@ -117,7 +117,7 @@ export const specialFeatures = {
           }
         }
         if (this.touchendX > this.touchstartX) {
-          console.log(this.index);
+          // console.log(this.index);
           if (this.index == 1){return}
           else {
             this.moveToPrevSlide(slideHolder,slideWidth);
@@ -210,13 +210,13 @@ export const specialFeatures = {
         series = parseFloat(helperFunctions.getSingleUrlParam('id'))+1,
         slideArray = this.getSlides(),
       ){
-        console.log(series);
+        // console.log(series);
         if (!Number.isInteger(series)){
           series = 1;
         }
         this.index = series;
-        console.log(this.index);
-        console.log(slideArray[this.index])
+        // console.log(this.index);
+        // console.log(slideArray[this.index])
         this.assignCurrentSlide(slideArray[this.index], document.querySelector('.currentSlide'),slideArray)
         this.moveSlides(slideHolder, slideWidth, this.index);
         this.checkIndexAndButtons(prevBtn,nextBtn, slideArray);

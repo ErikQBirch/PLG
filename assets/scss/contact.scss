@@ -142,6 +142,8 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
           @include centered;
           flex-direction: row;
           justify-content: space-between;
+          align-items:flex-start;
+          height: 285px;
           #side1{
             width: 32.5%;
             h1{
@@ -154,16 +156,28 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
             @include centered;
             margin:0;
             width: 65%;
-            h2{
+            height: 85%;
+            margin-top: 2rem;
+            justify-content: space-between;
+            div{
               width: 100%;
-              &:before, &:after{
-                width: 35%;
+              h2{
+                width: 100%;
               }
-              &:nth-of-type(2){
-                &:before, &:after{
-                  width: 25%;
+              &#part2a{
+                h2{
+                  &:before, &:after{
+                    width: 35%;
+                  }
                 }
-              }
+              }   
+              &#part2b{
+                h2{
+                  &:before, &:after{
+                    width: 25%;
+                  }
+                }
+              }            
             }
           }
         }
@@ -223,22 +237,31 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
         margin-top: 7.5rem;
         width: 900px;
         section#infoArea{
+          height:350px;
           #side2{
-            @include centered;
             margin:0;
             width: 65%;
             align-self: flex-start;
+            height: 80%;
             margin-top: 2rem;
-            h2{
-              width: 100%;
-              &:before, &:after{
-                width: 37.5%;
+            div{
+              h2{
+                width: 100%;
               }
-              &:nth-of-type(2){
-                &:before, &:after{
-                  width: 30%;
+              &#part2a{
+                h2{
+                  &:before, &:after{
+                    width: 37.5%;
+                  }
                 }
-              }
+              }   
+              &#part2b{
+                h2{
+                  &:before, &:after{
+                    width: 30%;
+                  }
+                }
+              }            
             }
           }
         }
