@@ -22,6 +22,7 @@
     width: 100%;
     justify-content: flex-start;
     overflow-y: scroll;
+    margin-bottom: 2.5rem;
   }
   body main section#background div#content_tag img {
     margin: 15vh auto 5vh auto;
@@ -29,9 +30,11 @@
   }
   body main section#background div#content_tag p {
     color: white;
-    padding: 0 5vw 2.5rem 5vw;
+    width: 85%;
+    padding: 1rem 5vw 1rem 5vw;
     text-align: left;
     line-height: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
   }
   body main section#background figure#background_figure {
     width: 100%;
@@ -44,7 +47,7 @@
     position: absolute;
   }
   body main section#background figure#background_figure img {
-    filter: blur(10px) brightness(40%);
+    filter: blur(10px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,7 +116,6 @@
     z-index: 0;
   }
   body main section#background figure#background_figure img {
-    filter: blur(10px) brightness(60%);
     position: absolute;
     top: 50%;
     left: 50%;

@@ -223,17 +223,17 @@ export const specialFeatures = {
 
       },
       theEvents : function(carousel, slideHolder,nextBtn,prevBtn, slideWidth, slideNav_array, slideArray = this.getSlides()){
-        document.addEventListener('touchstart', (e) => { // SWIPE SCREEN
-          this.touchstartX = e.changedTouches[0].screenX;
-        });
-        document.addEventListener('touchend', (// SWIPE SCREEN
-          e, 
-          slideHolder = document.querySelector('#slideHolder'), 
-          slideWidth = this.getSlides()[this.index].clientWidth,
-          ) => { 
-          this.touchendX = e.changedTouches[0].screenX
-          this.checkDirection(slideHolder, slideWidth, slideArray);
-        });
+        // document.addEventListener('touchstart', (e) => { // SWIPE SCREEN
+        //   this.touchstartX = e.changedTouches[0].screenX;
+        // });
+        // document.addEventListener('touchend', (// SWIPE SCREEN
+        //   e, 
+        //   slideHolder = document.querySelector('#slideHolder'), 
+        //   slideWidth = this.getSlides()[this.index].clientWidth,
+        //   ) => { 
+        //   this.touchendX = e.changedTouches[0].screenX
+        //   this.checkDirection(slideHolder, slideWidth, slideArray);
+        // });
         nextBtn.addEventListener('click',()=>{
           this.moveToNextSlide(slideHolder, slideWidth);
           this.checkIndexAndButtons(prevBtn,nextBtn, slideArray);

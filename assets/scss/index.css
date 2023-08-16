@@ -250,7 +250,8 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     padding-left: 1rem;
   }
   body #popupMolecule div#optionHolder a:link span.count, body #popupMolecule div#optionHolder a:visited span.count {
-    width: 10%;
+    width: 15%;
+    text-align: center;
   }
   body #popupMolecule div#optionHolder a:hover, body #popupMolecule div#optionHolder a:active, body #popupMolecule div#optionHolder a:focus {
     box-shadow: 0px 0px 5px white;
