@@ -302,6 +302,9 @@ export const specialFeatures = {
       // main.style.filter = "blur(10px) brightness(30%)";
       // header.style.filter = "blur(10px) brightness(30%)";
 
+      // h3.style.color = "red";
+      // h3.style.textShadow = "0 0 0.5rem red;";
+      // figure.style.boxShadow = "0 0 1rem red;"
       main.classList.add("blarken");
       header.classList.add("blarken");
       

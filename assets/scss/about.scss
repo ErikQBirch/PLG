@@ -1,3 +1,5 @@
+@import "index";
+
 @mixin centered {
   display:flex;
   flex-direction: column;
@@ -15,6 +17,7 @@
       section#background{
         height: 100vh;
         overflow:hidden;
+        box-shadow: inset 0 0 50px $base-color;
         div#content_tag{
           position:absolute;
           height: 100vh;

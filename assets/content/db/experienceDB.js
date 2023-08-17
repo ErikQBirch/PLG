@@ -9,7 +9,7 @@ export const expDB = {
       "position":"Graduate",
       "descript":`
       <u>2020 - 2021 (Singapore)</u><br>
-      Major: /a> Design, Arts, Entertainment, and Media Management<br><br>
+      Major: Design, Arts, Entertainment, and Media Management<br><br>
       <a href="https://fzdschool.com/">See website --></a>
       `
     },

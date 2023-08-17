@@ -9,6 +9,354 @@ button:hover, button:active, button:focus {
   cursor: pointer;
 }
 
+.blur {
+  filter: blur(10px);
+}
+
+h1, h2, h3, h4, h5, p, div, article, a, button {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media only all and (min-width: 0) {
+  body {
+    height: 100vh;
+    background-color: black;
+  }
+  body header a#logoArea {
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    display: flex;
+    width: -moz-fit-content;
+    width: fit-content;
+    text-decoration: none;
+    width: 150px;
+  }
+  body header a#logoArea figure {
+    display: flex;
+    width: 100%;
+  }
+  body header a#logoArea figure img {
+    width: 100%;
+  }
+  body header a#logoArea span {
+    font-size: 5rem;
+    color: rgb(255, 240, 105);
+    font-family: "Alike Angular", serif;
+    text-shadow: 2px 2px 5px black;
+    text-align: center;
+  }
+  body header nav#mainNav {
+    display: none;
+  }
+  body header div#menu-btn {
+    position: relative;
+    text-shadow: 0 0 0.5rem rgb(0, 175, 255);
+    color: rgb(0, 175, 255);
+    z-index: 4;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  body header div#menu-btn:hover, body header div#menu-btn:active, body header div#menu-btn:focus {
+    color: white;
+  }
+  body header div#menu-btn span {
+    border: 1px solid rgb(0, 175, 255);
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s;
+  }
+  body header div#menu-btn span.faded {
+    opacity: 0;
+  }
+  body header section#sideMenu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  body header section#sideMenu.closed {
+    display: none;
+  }
+  body header section#sideMenu nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  body header section#sideMenu nav ul li {
+    border: 1px solid white;
+    margin: 0.5rem 0;
+  }
+  body header section#sideMenu nav ul li:hover, body header section#sideMenu nav ul li:active, body header section#sideMenu nav ul li:focus {
+    border: 2.5px solid white;
+    box-shadow: 0 0 5px white;
+  }
+  body header section#sideMenu nav ul li a, body header section#sideMenu nav ul li button {
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 5rem;
+  }
+  body header section#sideMenu nav ul li a:link, body header section#sideMenu nav ul li a:visited, body header section#sideMenu nav ul li button:link, body header section#sideMenu nav ul li button:visited {
+    text-decoration: none;
+  }
+  body header.clear a#logoArea, body header.clear nav#mainNav > ul, body header.clear div#menu-btn, body header.clear section#sideMenu {
+    display: none;
+  }
+  body header.clear nav#mainNav {
+    filter: blur(10px);
+  }
+  body main {
+    height: 100vh;
+  }
+  body main section#background {
+    height: 100vh;
+    overflow: hidden;
+  }
+  body main section#background div#filter_tag {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+    background-image: radial-gradient(circle at 100% 150%, rgb(20, 10, 30) 24%, rgb(0, 0, 75) 24%, rgb(0, 0, 75) 28%, rgb(20, 10, 30) 28%, rgb(20, 10, 30) 36%, rgb(0, 0, 75) 36%, rgb(0, 0, 75) 40%, transparent 40%, transparent), radial-gradient(circle at 0 150%, rgb(20, 10, 30) 24%, rgb(0, 0, 75) 24%, rgb(0, 0, 75) 28%, rgb(20, 10, 30) 28%, rgb(20, 10, 30) 36%, rgb(0, 0, 75) 36%, rgb(0, 0, 75) 40%, transparent 40%, transparent), radial-gradient(circle at 50% 100%, rgb(0, 0, 75) 10%, rgb(20, 10, 30) 10%, rgb(20, 10, 30) 23%, rgb(0, 0, 75) 23%, rgb(0, 0, 75) 30%, rgb(20, 10, 30) 30%, rgb(20, 10, 30) 43%, rgb(0, 0, 75) 43%, rgb(0, 0, 75) 50%, rgb(20, 10, 30) 50%, rgb(20, 10, 30) 63%, rgb(0, 0, 75) 63%, rgb(0, 0, 75) 71%, transparent 71%, transparent), radial-gradient(circle at 100% 50%, rgb(0, 0, 75) 5%, rgb(20, 10, 30) 5%, rgb(20, 10, 30) 15%, rgb(0, 0, 75) 15%, rgb(0, 0, 75) 20%, rgb(20, 10, 30) 20%, rgb(0, 0, 30) 29%, rgb(0, 0, 75) 29%, rgb(0, 0, 75) 34%, rgb(0, 0, 30) 34%, rgb(0, 0, 30) 44%, rgb(0, 0, 75) 44%, rgb(0, 0, 75) 49%, transparent 49%, transparent), radial-gradient(circle at 0 50%, rgb(0, 0, 75) 5%, rgb(0, 0, 30) 5%, rgb(0, 0, 30) 15%, rgb(0, 0, 75) 15%, rgb(0, 0, 75) 20%, rgb(0, 0, 30) 20%, rgb(0, 0, 30) 29%, rgb(0, 0, 75) 29%, rgb(0, 0, 75) 34%, rgb(0, 0, 30) 34%, rgb(0, 0, 30) 44%, rgb(0, 0, 75) 44%, rgb(0, 0, 75) 49%, transparent 49%, transparent);
+    background: linear-gradient(135deg, rgb(0, 0, 30) 21px, rgb(0, 0, 75) 22px, rgb(0, 0, 75) 24px, transparent 24px, transparent 67px, rgb(0, 0, 75) 67px, rgb(0, 0, 75) 69px, transparent 69px), linear-gradient(225deg, rgb(0, 0, 30) 21px, rgb(0, 0, 75) 22px, rgb(0, 0, 75) 24px, transparent 24px, transparent 67px, rgb(0, 0, 75) 67px, rgb(0, 0, 75) 69px, transparent 69px) 0 64px;
+    background-color: rgb(0, 0, 30);
+    background-size: 64px 128px;
+  }
+  body main section#background figure {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+  }
+  body main section#background figure img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+  }
+  body main section#background figure img.deskImg {
+    display: none;
+  }
+  body main section#background figure img.keep {
+    animation-name: fadeIn;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+  }
+  body main section#background figure img.dying {
+    animation-name: fadeOut;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    z-index: 1;
+  }
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+      filter: blur(0px);
+    }
+    100% {
+      opacity: 0;
+      filter: blur(10px);
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      filter: blur(10px);
+    }
+    100% {
+      opacity: 1;
+      filter: blur(0px);
+    }
+  }
+  body #popupMolecule {
+    color: white;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 0;
+    z-index: 4;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    padding-top: 20vh;
+  }
+  body #popupMolecule span#instructions {
+    margin-bottom: 1rem;
+  }
+  body #popupMolecule div#optionHolder {
+    width: 75%;
+    height: 65vh;
+    overflow-y: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none;
+  }
+  body #popupMolecule div#optionHolder::-webkit-scrollbar {
+    display: none;
+  }
+  body #popupMolecule div#optionHolder a {
+    width: 95%;
+    margin: 0 auto;
+  }
+  body #popupMolecule div#optionHolder a:link, body #popupMolecule div#optionHolder a:visited {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-decoration: none;
+    margin: 0.5rem auto;
+    font-style: italic;
+    border: 1px solid rgb(100, 100, 100);
+  }
+  body #popupMolecule div#optionHolder a:link figure, body #popupMolecule div#optionHolder a:visited figure {
+    width: 40%;
+  }
+  body #popupMolecule div#optionHolder a:link figure img, body #popupMolecule div#optionHolder a:visited figure img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  body #popupMolecule div#optionHolder a:link span.seriesName, body #popupMolecule div#optionHolder a:visited span.seriesName {
+    width: 50%;
+    padding-left: 1rem;
+  }
+  body #popupMolecule div#optionHolder a:link span.count, body #popupMolecule div#optionHolder a:visited span.count {
+    width: 15%;
+    text-align: center;
+  }
+  body #popupMolecule div#optionHolder a:hover, body #popupMolecule div#optionHolder a:active, body #popupMolecule div#optionHolder a:focus {
+    box-shadow: 0px 0px 5px white;
+    border: 2.5px solid rgb(100, 100, 100);
+  }
+  body #popupMolecule div#btnHolder {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+  }
+  body #popupMolecule div#btnHolder button {
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-style: italic;
+  }
+  body footer {
+    color: white;
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
+    font-size: 0.5rem;
+  }
+}
+@media only all and (min-width: 760px) {
+  body header a#logoArea {
+    width: 200px;
+  }
+  body main section#background figure img {
+    width: auto;
+    height: 100vh;
+  }
+  body main section#background figure img.deskImg {
+    display: flex;
+  }
+  body main section#background figure img.mobileImg {
+    display: none;
+  }
+}
+@media only all and (min-width: 992px) {
+  body #popupMolecule div#optionHolder {
+    width: 40%;
+  }
+  body #popupMolecule div#btnHolder {
+    width: 37.5%;
+  }
+}
+@media only all and (min-width: 1200px) {
+  body header nav#mainNav {
+    display: flex;
+    height: 7.5vh;
+    width: 100%;
+    background-color: rgb(0, 0, 30);
+    background-image: radial-gradient(circle at 100% 150%, rgb(20, 10, 30) 24%, rgb(30, 30, 30) 24%, rgb(30, 30, 30) 28%, rgb(20, 10, 30) 28%, rgb(20, 10, 30) 36%, rgb(30, 30, 30) 36%, rgb(30, 30, 30) 40%, transparent 40%, transparent), radial-gradient(circle at 0 150%, rgb(20, 10, 30) 24%, rgb(30, 30, 30) 24%, rgb(30, 30, 30) 28%, rgb(20, 10, 30) 28%, rgb(20, 10, 30) 36%, rgb(30, 30, 30) 36%, rgb(30, 30, 30) 40%, transparent 40%, transparent), radial-gradient(circle at 50% 100%, rgb(30, 30, 30) 10%, rgb(20, 10, 30) 10%, rgb(20, 10, 30) 23%, rgb(30, 30, 30) 23%, rgb(30, 30, 30) 30%, rgb(20, 10, 30) 30%, rgb(20, 10, 30) 43%, rgb(30, 30, 30) 43%, rgb(30, 30, 30) 50%, rgb(20, 10, 30) 50%, rgb(20, 10, 30) 63%, rgb(30, 30, 30) 63%, rgb(30, 30, 30) 71%, transparent 71%, transparent), radial-gradient(circle at 100% 50%, rgb(30, 30, 30) 5%, rgb(20, 10, 30) 5%, rgb(20, 10, 30) 15%, rgb(30, 30, 30) 15%, rgb(30, 30, 30) 20%, rgb(20, 10, 30) 20%, rgb(20, 10, 30) 29%, rgb(30, 30, 30) 29%, rgb(30, 30, 30) 34%, rgb(20, 10, 30) 34%, rgb(20, 10, 30) 44%, rgb(30, 30, 30) 44%, rgb(30, 30, 30) 49%, transparent 49%, transparent), radial-gradient(circle at 0 50%, rgb(30, 30, 30) 5%, rgb(20, 10, 30) 5%, rgb(20, 10, 30) 15%, rgb(30, 30, 30) 15%, rgb(30, 30, 30) 20%, rgb(20, 10, 30) 20%, rgb(20, 10, 30) 29%, rgb(30, 30, 30) 29%, rgb(30, 30, 30) 34%, rgb(20, 10, 30) 34%, rgb(20, 10, 30) 44%, rgb(30, 30, 30) 44%, rgb(30, 30, 30) 49%, transparent 49%, transparent);
+    background-size: 100px 50px;
+    background: linear-gradient(135deg, rgb(20, 10, 30) 21px, rgb(30, 30, 30) 22px, rgb(30, 30, 30) 24px, transparent 24px, transparent 67px, rgb(30, 30, 30) 67px, rgb(30, 30, 30) 69px, transparent 69px), linear-gradient(225deg, rgb(20, 10, 30) 21px, rgb(30, 30, 30) 22px, rgb(30, 30, 30) 24px, transparent 24px, transparent 67px, rgb(30, 30, 30) 67px, rgb(30, 30, 30) 69px, transparent 69px) 0 64px;
+    background-color: rgb(20, 10, 30);
+    background-size: 64px 128px;
+  }
+  body header nav#mainNav ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+  }
+  body header nav#mainNav ul li a, body header nav#mainNav ul li button {
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    font-size: 1.25rem;
+  }
+  body header nav#mainNav ul li a:hover, body header nav#mainNav ul li a:active, body header nav#mainNav ul li button:hover, body header nav#mainNav ul li button:active {
+    text-shadow: 0 0 10px rgb(0, 175, 255);
+    font-style: italic;
+  }
+  body header div#menu-btn {
+    display: none;
+    cursor: pointer;
+  }
+  body header div#menu-btn span {
+    display: none;
+  }
+  body main {
+    height: 92.5vh;
+  }
+  body main section#background {
+    height: 92.5vh;
+  }
+  body main section#background div#filter_tag {
+    height: 92.5vh;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button:hover, button:active, button:focus {
+  cursor: pointer;
+}
+
 h1, h2, h3, h4, h5, p, div, article, a, button {
   font-family: Arial, Helvetica, sans-serif;
 }

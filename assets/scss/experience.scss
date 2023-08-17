@@ -1,5 +1,4 @@
-@import "carousel";
-
+@import "index";
 
 @mixin centered {
   display:flex;
@@ -55,12 +54,12 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
         display:flex;
         flex-direction: column;
         overflow:hidden;  
-        color:rgb(0, 175, 255);
+        color:$base-color;
         text-align:center;
         h1{
           width: fit-content;
           margin: 0 auto;
-          border-bottom: 5px solid rgb(0, 175, 255);
+          border-bottom: 5px solid $base-color;
         }
         div#iconHolder{
           display:flex;
@@ -69,11 +68,11 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
           margin: 1rem auto;
           img{
             width: 40px;
-            border: 1px solid rgb(0, 175, 255);
+            border: 1px solid $base-color;
             cursor: pointer;
             &.selected{
-              border: 3px solid rgb(0, 175, 255);
-              box-shadow: 0 0 20px rgb(0, 175, 255);
+              border: 3px solid $base-color;
+              box-shadow: 0 0 20px $base-color;
               border-radius: 3px;
             }
           }
@@ -81,9 +80,9 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
         h2{}
         hr{
           width: 80%;
-          background-color: rgb(0, 175, 255);
+          background-color: $base-color;
           margin: 1rem auto;
-          border:1px solid rgb(0, 175, 255);
+          border:1px solid $base-color;
         }
         p{
           overflow-y:scroll; 
@@ -95,7 +94,7 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
             display:none;
           } 
           a:link, a:visited{
-            color: rgb(0, 175, 255);
+            color: $base-color;
             text-decoration: none;
           }
           a:hover, a:active{
