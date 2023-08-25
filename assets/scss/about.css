@@ -50,8 +50,8 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
   }
   body header div#menu-btn {
     position: relative;
-    text-shadow: 0 0 0.5rem rgb(250, 187, 56);
-    color: rgb(250, 187, 56);
+    text-shadow: 0 0 0.5rem white;
+    color: white;
     z-index: 4;
     font-size: 2rem;
     align-items: center;
@@ -59,10 +59,9 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     cursor: pointer;
   }
   body header div#menu-btn:hover, body header div#menu-btn:active, body header div#menu-btn:focus {
-    color: white;
+    color: rgb(255, 240, 105);
   }
   body header div#menu-btn span {
-    border: 1px solid rgb(250, 187, 56);
     position: absolute;
     top: 25px;
     right: 25px;
@@ -100,8 +99,8 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     margin: 0.5rem 0;
   }
   body header section#sideMenu nav ul li:hover, body header section#sideMenu nav ul li:active, body header section#sideMenu nav ul li:focus {
-    border: 2.5px solid white;
-    box-shadow: 0 0 5px white;
+    border: 2.5px solid rgb(255, 240, 105);
+    box-shadow: 0 0 5px rgb(255, 240, 105);
   }
   body header section#sideMenu nav ul li a, body header section#sideMenu nav ul li button {
     text-align: center;

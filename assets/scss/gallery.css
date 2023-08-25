@@ -63,7 +63,6 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     color: rgb(255, 240, 103);
   }
   body header div#menu-btn span {
-    border: 1px solid white;
     position: absolute;
     top: 25px;
     right: 25px;
@@ -407,7 +406,6 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     color: rgb(255, 240, 103);
   }
   body header div#menu-btn span {
-    border: 1px solid white;
     position: absolute;
     top: 25px;
     right: 25px;

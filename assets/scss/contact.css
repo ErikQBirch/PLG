@@ -61,10 +61,9 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     cursor: pointer;
   }
   body header div#menu-btn:hover, body header div#menu-btn:active, body header div#menu-btn:focus {
-    color: white;
+    color: rgb(255, 240, 103);
   }
   body header div#menu-btn span {
-    border: 1px solid white;
     position: absolute;
     top: 25px;
     right: 25px;
@@ -102,8 +101,8 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     margin: 0.5rem 0;
   }
   body header section#sideMenu nav ul li:hover, body header section#sideMenu nav ul li:active, body header section#sideMenu nav ul li:focus {
-    border: 2.5px solid white;
-    box-shadow: 0 0 5px white;
+    border: 2.5px solid rgb(255, 240, 103);
+    box-shadow: 0 0 5px rgb(255, 240, 103);
   }
   body header section#sideMenu nav ul li a, body header section#sideMenu nav ul li button {
     text-align: center;
@@ -251,7 +250,7 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     text-align: center;
   }
   body #popupMolecule div#optionHolder a:hover, body #popupMolecule div#optionHolder a:active, body #popupMolecule div#optionHolder a:focus {
-    box-shadow: 0px 0px 5px white;
+    box-shadow: 0px 0px 5px rgb(255, 240, 103);
     border: 2.5px solid rgb(100, 100, 100);
   }
   body #popupMolecule div#btnHolder {
@@ -322,7 +321,8 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     font-size: 1.25rem;
   }
   body header nav#mainNav ul li a:hover, body header nav#mainNav ul li a:active, body header nav#mainNav ul li button:hover, body header nav#mainNav ul li button:active {
-    text-shadow: 0 0 10px white;
+    text-shadow: 0 0 10px rgb(255, 240, 103);
+    color: rgb(255, 240, 103);
     font-style: italic;
   }
   body header div#menu-btn {
