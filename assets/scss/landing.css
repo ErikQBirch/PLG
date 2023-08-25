@@ -45,7 +45,6 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     font-size: 5rem;
     color: rgb(255, 240, 105);
     font-family: "Alike Angular", serif;
-    background-color: red;
     text-shadow: 2px 2px 5px black;
     text-align: center;
   }
@@ -140,9 +139,10 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     height: 100vh;
     width: 100%;
     z-index: 2;
+    background-image: radial-gradient(circle at 100% 150%, rgb(20, 10, 30) 24%, rgb(0, 0, 75) 24%, rgb(0, 0, 75) 28%, rgb(20, 10, 30) 28%, rgb(20, 10, 30) 36%, rgb(0, 0, 75) 36%, rgb(0, 0, 75) 40%, transparent 40%, transparent), radial-gradient(circle at 0 150%, rgb(20, 10, 30) 24%, rgb(0, 0, 75) 24%, rgb(0, 0, 75) 28%, rgb(20, 10, 30) 28%, rgb(20, 10, 30) 36%, rgb(0, 0, 75) 36%, rgb(0, 0, 75) 40%, transparent 40%, transparent), radial-gradient(circle at 50% 100%, rgb(0, 0, 75) 10%, rgb(20, 10, 30) 10%, rgb(20, 10, 30) 23%, rgb(0, 0, 75) 23%, rgb(0, 0, 75) 30%, rgb(20, 10, 30) 30%, rgb(20, 10, 30) 43%, rgb(0, 0, 75) 43%, rgb(0, 0, 75) 50%, rgb(20, 10, 30) 50%, rgb(20, 10, 30) 63%, rgb(0, 0, 75) 63%, rgb(0, 0, 75) 71%, transparent 71%, transparent), radial-gradient(circle at 100% 50%, rgb(0, 0, 75) 5%, rgb(20, 10, 30) 5%, rgb(20, 10, 30) 15%, rgb(0, 0, 75) 15%, rgb(0, 0, 75) 20%, rgb(20, 10, 30) 20%, rgb(0, 0, 30) 29%, rgb(0, 0, 75) 29%, rgb(0, 0, 75) 34%, rgb(0, 0, 30) 34%, rgb(0, 0, 30) 44%, rgb(0, 0, 75) 44%, rgb(0, 0, 75) 49%, transparent 49%, transparent), radial-gradient(circle at 0 50%, rgb(0, 0, 75) 5%, rgb(0, 0, 30) 5%, rgb(0, 0, 30) 15%, rgb(0, 0, 75) 15%, rgb(0, 0, 75) 20%, rgb(0, 0, 30) 20%, rgb(0, 0, 30) 29%, rgb(0, 0, 75) 29%, rgb(0, 0, 75) 34%, rgb(0, 0, 30) 34%, rgb(0, 0, 30) 44%, rgb(0, 0, 75) 44%, rgb(0, 0, 75) 49%, transparent 49%, transparent);
+    background: linear-gradient(135deg, rgb(0, 0, 30) 21px, rgb(0, 0, 75) 22px, rgb(0, 0, 75) 24px, transparent 24px, transparent 67px, rgb(0, 0, 75) 67px, rgb(0, 0, 75) 69px, transparent 69px), linear-gradient(225deg, rgb(0, 0, 30) 21px, rgb(0, 0, 75) 22px, rgb(0, 0, 75) 24px, transparent 24px, transparent 67px, rgb(0, 0, 75) 67px, rgb(0, 0, 75) 69px, transparent 69px) 0 64px;
     background-color: rgb(0, 0, 30);
-    background-image: radial-gradient(circle at 100% 150%, rgb(0, 0, 30) 24%, rgb(0, 0, 75) 24%, rgb(0, 0, 75) 28%, rgb(0, 0, 30) 28%, rgb(0, 0, 30) 36%, rgb(0, 0, 75) 36%, rgb(0, 0, 75) 40%, transparent 40%, transparent), radial-gradient(circle at 0 150%, rgb(0, 0, 30) 24%, rgb(0, 0, 75) 24%, rgb(0, 0, 75) 28%, rgb(0, 0, 30) 28%, rgb(0, 0, 30) 36%, rgb(0, 0, 75) 36%, rgb(0, 0, 75) 40%, transparent 40%, transparent), radial-gradient(circle at 50% 100%, rgb(0, 0, 75) 10%, rgb(0, 0, 30) 10%, rgb(0, 0, 30) 23%, rgb(0, 0, 75) 23%, rgb(0, 0, 75) 30%, rgb(0, 0, 30) 30%, rgb(0, 0, 30) 43%, rgb(0, 0, 75) 43%, rgb(0, 0, 75) 50%, rgb(0, 0, 30) 50%, rgb(0, 0, 30) 63%, rgb(0, 0, 75) 63%, rgb(0, 0, 75) 71%, transparent 71%, transparent), radial-gradient(circle at 100% 50%, rgb(0, 0, 75) 5%, rgb(0, 0, 30) 5%, rgb(0, 0, 30) 15%, rgb(0, 0, 75) 15%, rgb(0, 0, 75) 20%, rgb(0, 0, 30) 20%, rgb(0, 0, 30) 29%, rgb(0, 0, 75) 29%, rgb(0, 0, 75) 34%, rgb(0, 0, 30) 34%, rgb(0, 0, 30) 44%, rgb(0, 0, 75) 44%, rgb(0, 0, 75) 49%, transparent 49%, transparent), radial-gradient(circle at 0 50%, rgb(0, 0, 75) 5%, rgb(0, 0, 30) 5%, rgb(0, 0, 30) 15%, rgb(0, 0, 75) 15%, rgb(0, 0, 75) 20%, rgb(0, 0, 30) 20%, rgb(0, 0, 30) 29%, rgb(0, 0, 75) 29%, rgb(0, 0, 75) 34%, rgb(0, 0, 30) 34%, rgb(0, 0, 30) 44%, rgb(0, 0, 75) 44%, rgb(0, 0, 75) 49%, transparent 49%, transparent);
-    background-size: 100px 50px;
+    background-size: 64px 128px;
     box-shadow: inset 0 0 50px rgb(0, 175, 255);
   }
   body main section#background figure {
@@ -311,6 +311,9 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     background-color: rgb(0, 0, 30);
     background-image: radial-gradient(circle at 100% 150%, rgb(20, 10, 30) 24%, rgb(30, 30, 30) 24%, rgb(30, 30, 30) 28%, rgb(20, 10, 30) 28%, rgb(20, 10, 30) 36%, rgb(30, 30, 30) 36%, rgb(30, 30, 30) 40%, transparent 40%, transparent), radial-gradient(circle at 0 150%, rgb(20, 10, 30) 24%, rgb(30, 30, 30) 24%, rgb(30, 30, 30) 28%, rgb(20, 10, 30) 28%, rgb(20, 10, 30) 36%, rgb(30, 30, 30) 36%, rgb(30, 30, 30) 40%, transparent 40%, transparent), radial-gradient(circle at 50% 100%, rgb(30, 30, 30) 10%, rgb(20, 10, 30) 10%, rgb(20, 10, 30) 23%, rgb(30, 30, 30) 23%, rgb(30, 30, 30) 30%, rgb(20, 10, 30) 30%, rgb(20, 10, 30) 43%, rgb(30, 30, 30) 43%, rgb(30, 30, 30) 50%, rgb(20, 10, 30) 50%, rgb(20, 10, 30) 63%, rgb(30, 30, 30) 63%, rgb(30, 30, 30) 71%, transparent 71%, transparent), radial-gradient(circle at 100% 50%, rgb(30, 30, 30) 5%, rgb(20, 10, 30) 5%, rgb(20, 10, 30) 15%, rgb(30, 30, 30) 15%, rgb(30, 30, 30) 20%, rgb(20, 10, 30) 20%, rgb(20, 10, 30) 29%, rgb(30, 30, 30) 29%, rgb(30, 30, 30) 34%, rgb(20, 10, 30) 34%, rgb(20, 10, 30) 44%, rgb(30, 30, 30) 44%, rgb(30, 30, 30) 49%, transparent 49%, transparent), radial-gradient(circle at 0 50%, rgb(30, 30, 30) 5%, rgb(20, 10, 30) 5%, rgb(20, 10, 30) 15%, rgb(30, 30, 30) 15%, rgb(30, 30, 30) 20%, rgb(20, 10, 30) 20%, rgb(20, 10, 30) 29%, rgb(30, 30, 30) 29%, rgb(30, 30, 30) 34%, rgb(20, 10, 30) 34%, rgb(20, 10, 30) 44%, rgb(30, 30, 30) 44%, rgb(30, 30, 30) 49%, transparent 49%, transparent);
     background-size: 100px 50px;
+    background: linear-gradient(135deg, rgb(20, 10, 30) 21px, rgb(30, 30, 30) 22px, rgb(30, 30, 30) 24px, transparent 24px, transparent 67px, rgb(30, 30, 30) 67px, rgb(30, 30, 30) 69px, transparent 69px), linear-gradient(225deg, rgb(20, 10, 30) 21px, rgb(30, 30, 30) 22px, rgb(30, 30, 30) 24px, transparent 24px, transparent 67px, rgb(30, 30, 30) 67px, rgb(30, 30, 30) 69px, transparent 69px) 0 64px;
+    background-color: rgb(20, 10, 30);
+    background-size: 64px 128px;
   }
   body header nav#mainNav ul {
     display: flex;

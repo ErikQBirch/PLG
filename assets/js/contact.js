@@ -7,14 +7,15 @@ const pageStuff = {
   background: function(
     background = helperFunctions.generateElement('section',"background"),
     figure_tag = helperFunctions.generateElement('figure'),
-    img_tag1 = helperFunctions.generateElement('img',"","mobileImg","","../assets/content/imgs/backgrounds/mobile1.webp"),
-    img_tag2 = helperFunctions.generateElement('img',"","deskImg","","../assets/content/imgs/backgrounds/desk1.webp"),
+    // img_tag1 = helperFunctions.generateElement('img',"","mobileImg","","../assets/content/imgs/backgrounds/mobile1.webp"),
+    // img_tag2 = helperFunctions.generateElement('img',"","deskImg","","../assets/content/imgs/backgrounds/desk1.webp"),
     filter_tag = helperFunctions.generateElement('div',"filter_tag")
     ){
 
       
-      figure_tag = helperFunctions.appendChildren(figure_tag, img_tag1, img_tag2);
-      background = helperFunctions.appendChildren(background, filter_tag, figure_tag);
+      // figure_tag = helperFunctions.appendChildren(figure_tag, img_tag1, img_tag2);
+      // background = helperFunctions.appendChildren(background, filter_tag, figure_tag)
+      background = helperFunctions.appendChildren(background, filter_tag);
 
       return background;
     },

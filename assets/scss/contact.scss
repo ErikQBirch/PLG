@@ -169,6 +169,10 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
                   &:before, &:after{
                     width: 35%;
                   }
+                  p{
+                    width: 50%;
+                    margin: 0 auto;
+                  }
                 }
               }   
               &#part2b{

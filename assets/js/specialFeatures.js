@@ -78,8 +78,10 @@ export const specialFeatures = {
     closePopUp:function(section,main,header){
       section.remove();
       main.classList.remove("blarken");
+      main.classList.remove('withPopUp')
       header.classList.remove("blarken");
 
+      main.style.backgroundImage = "none";
       // console.log(main);
     },
     functionality: {
@@ -299,6 +301,10 @@ export const specialFeatures = {
       section.appendChild(topStuff);
       section = helperFunctions.nestChildren(section, figure, img);
       body.insertBefore(section, main);
+
+      main.style.backgroundImage = `url(../${imageInfo.mainImg})`
+      main.classList.add("withPopUp");
+
       // main.style.filter = "blur(10px) brightness(30%)";
       // header.style.filter = "blur(10px) brightness(30%)";
 
@@ -312,7 +318,8 @@ export const specialFeatures = {
       
       
       if (imageInfo.layout == "portrait"){
-        section.classList.add('portrait')
+        section.classList.add('portrait');
+        // main.style.backgroundPosition = "top"
       }
       else {
         section.classList.add('landscape');

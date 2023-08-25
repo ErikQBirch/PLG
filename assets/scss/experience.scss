@@ -71,8 +71,8 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
             border: 1px solid $base-color;
             cursor: pointer;
             &.selected{
-              border: 3px solid $base-color;
-              box-shadow: 0 0 20px $base-color;
+              border: 3px solid $secondary-color;
+              box-shadow: 0 0 20px $secondary-color;
               border-radius: 3px;
             }
           }
@@ -98,7 +98,7 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
             text-decoration: none;
           }
           a:hover, a:active{
-            color:white;
+            color:rgb(255,240,103);
           }
         }
       }

@@ -1,5 +1,15 @@
-$base-color:rgb(0, 175, 255);
+// $base-color:rgb(0, 175, 255);
 // $base-color:rgb(100, 100, 100);
+
+$base-color:white;
+$secondary-color: rgb(255,240,103);
+$background1: rgb(0,13,29);
+// $background2: rgb(13,18,23);
+$header1:rgb(15,36,39);
+$header2: rgb(31,50,59);
+
+
+
 
 
 @mixin centered {
@@ -38,7 +48,9 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
 @media only all and (min-width: 0) {
   body{
     height: 100vh;
-    background-color:black;
+    // background-color:rgb(0,13,29);
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(31,50,59,1) 100%);
     header{
       a#logoArea{
         position: absolute;
@@ -74,7 +86,7 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
         justify-content: center;
         cursor: pointer;
         &:hover,&:active,&:focus{
-          color:white;
+          color:$secondary-color;
         }
         span{
           border: 1px solid $base-color;
@@ -114,8 +126,8 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
               border:1px solid white;
               margin: 0.5rem 0;
               &:hover,&:active,&:focus{
-                border:2.5px solid white;
-                box-shadow: 0 0 5px white;
+                border:2.5px solid $secondary-color;
+                box-shadow: 0 0 5px $secondary-color;
               }
               a, button{
                 text-align:center;
@@ -158,22 +170,6 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
           height: 100vh;
           width: 100%;
           z-index: 2;
-
-          // background-color:rgba(20,10,30,1);
-          background-image:
-          radial-gradient(circle at 100% 150%, rgba(20,10,30,1) 24%, rgba(0,0,75,1) 24%, rgba(0,0,75,1) 28%, rgba(20,10,30,1) 28%, rgba(20,10,30,1) 36%, rgba(0,0,75,1) 36%, rgba(0,0,75,1) 40%, transparent 40%, transparent),
-          radial-gradient(circle at 0    150%, rgba(20,10,30,1) 24%, rgba(0,0,75,1) 24%, rgba(0,0,75,1) 28%, rgba(20,10,30,1) 28%, rgba(20,10,30,1) 36%, rgba(0,0,75,1) 36%, rgba(0,0,75,1) 40%, transparent 40%, transparent),
-          radial-gradient(circle at 50%  100%, rgba(0,0,75,1) 10%, rgba(20,10,30,1) 10%, rgba(20,10,30,1) 23%, rgba(0,0,75,1) 23%, rgba(0,0,75,1) 30%, rgba(20,10,30,1) 30%, rgba(20,10,30,1) 43%, rgba(0,0,75,1) 43%, rgba(0,0,75,1) 50%, rgba(20,10,30,1) 50%, rgba(20,10,30,1) 63%, rgba(0,0,75,1) 63%, rgba(0,0,75,1) 71%, transparent 71%, transparent),
-          radial-gradient(circle at 100% 50%, rgba(0,0,75,1) 5%, rgba(20,10,30,1) 5%, rgba(20,10,30,1) 15%, rgba(0,0,75,1) 15%, rgba(0,0,75,1) 20%, rgba(20,10,30,1) 20%, rgba(0,0,30,1) 29%, rgba(0,0,75,1) 29%, rgba(0,0,75,1) 34%, rgba(0,0,30,1) 34%, rgba(0,0,30,1) 44%, rgba(0,0,75,1) 44%, rgba(0,0,75,1) 49%, transparent 49%, transparent),
-          radial-gradient(circle at 0    50%, rgba(0,0,75,1) 5%, rgba(0,0,30,1) 5%, rgba(0,0,30,1) 15%, rgba(0,0,75,1) 15%, rgba(0,0,75,1) 20%, rgba(0,0,30,1) 20%, rgba(0,0,30,1) 29%, rgba(0,0,75,1) 29%, rgba(0,0,75,1) 34%, rgba(0,0,30,1) 34%, rgba(0,0,30,1) 44%, rgba(0,0,75,1) 44%, rgba(0,0,75,1) 49%, transparent 49%, transparent);
-          // background-size: 100px 50px;
-  
-          background:
-          linear-gradient(135deg, rgba(0,0,30,1) 21px, rgba(0,0,75,1) 22px, rgba(0,0,75,1) 24px, transparent 24px, transparent 67px, rgba(0,0,75,1) 67px, rgba(0,0,75,1) 69px, transparent 69px),
-          linear-gradient(225deg, rgba(0,0,30,1) 21px, rgba(0,0,75,1) 22px, rgba(0,0,75,1) 24px, transparent 24px, transparent 67px, rgba(0,0,75,1) 67px, rgba(0,0,75,1) 69px, transparent 69px)0 64px;
-          background-color:rgba(0,0,30,1);
-          background-size: 64px 128px;
-          box-shadow: inset 0 0 50px $base-color;
         }
         figure{
           height: 100vh;
@@ -290,7 +286,7 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
             }
           }
           &:hover, &:active, &:focus{
-            box-shadow: 0px 0px 5px white;
+            box-shadow: 0px 0px 5px $secondary-color;
             border: 2.5px solid rgba(100,100,100,1);
           }
         }
@@ -398,22 +394,16 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
         display:flex;
         height: 7.5vh;
         width: 100%;
-        background-color:rgba(0,0,30,1);
+        background-color: rgb(31,50,59);
+        background-color: rgb(15,36,39);
           background-image:
-          radial-gradient(circle at 100% 150%, rgba(20,10,30,1) 24%, rgba(30,30,30,1) 24%, rgba(30,30,30,1) 28%, rgba(20,10,30,1) 28%, rgba(20,10,30,1) 36%, rgba(30,30,30,1) 36%, rgba(30,30,30,1) 40%, transparent 40%, transparent),
-          radial-gradient(circle at 0    150%, rgba(20,10,30,1) 24%, rgba(30,30,30,1) 24%, rgba(30,30,30,1) 28%, rgba(20,10,30,1) 28%, rgba(20,10,30,1) 36%, rgba(30,30,30,1) 36%, rgba(30,30,30,1) 40%, transparent 40%, transparent),
-          radial-gradient(circle at 50%  100%, rgba(30,30,30,1) 10%, rgba(20,10,30,1) 10%, rgba(20,10,30,1) 23%, rgba(30,30,30,1) 23%, rgba(30,30,30,1) 30%, rgba(20,10,30,1) 30%, rgba(20,10,30,1) 43%, rgba(30,30,30,1) 43%, rgba(30,30,30,1) 50%, rgba(20,10,30,1) 50%, rgba(20,10,30,1) 63%, rgba(30,30,30,1) 63%, rgba(30,30,30,1) 71%, transparent 71%, transparent),
-          radial-gradient(circle at 100% 50%, rgba(30,30,30,1) 5%, rgba(20,10,30,1) 5%, rgba(20,10,30,1) 15%, rgba(30,30,30,1) 15%, rgba(30,30,30,1) 20%, rgba(20,10,30,1) 20%, rgba(20,10,30,1) 29%, rgba(30,30,30,1) 29%, rgba(30,30,30,1) 34%, rgba(20,10,30,1) 34%, rgba(20,10,30,1) 44%, rgba(30,30,30,1) 44%, rgba(30,30,30,1) 49%, transparent 49%, transparent),
-          radial-gradient(circle at 0    50%, rgba(30,30,30,1) 5%, rgba(20,10,30,1) 5%, rgba(20,10,30,1) 15%, rgba(30,30,30,1) 15%, rgba(30,30,30,1) 20%, rgba(20,10,30,1) 20%, rgba(20,10,30,1) 29%, rgba(30,30,30,1) 29%, rgba(30,30,30,1) 34%, rgba(20,10,30,1) 34%, rgba(20,10,30,1) 44%, rgba(30,30,30,1) 44%, rgba(30,30,30,1) 49%, transparent 49%, transparent);
+          radial-gradient(circle at 100% 150%, $header1 24%, $header2 24%, $header2 28%, $header1 28%, $header1 36%, $header2 36%, $header2 40%, transparent 40%, transparent),
+          radial-gradient(circle at 0    150%, $header1 24%, $header2 24%, $header2 28%, $header1 28%, $header1 36%, $header2 36%, $header2 40%, transparent 40%, transparent),
+          radial-gradient(circle at 50%  100%, $header2 10%, $header1 10%, $header1 23%, $header2 23%, $header2 30%, $header1 30%, $header1 43%, $header2 43%, $header2 50%, $header1 50%, $header1 63%, $header2 63%, $header2 71%, transparent 71%, transparent),
+          radial-gradient(circle at 100% 50%, $header2 5%, $header1 5%, $header1 15%, $header2 15%, $header2 20%, $header1 20%, $header1 29%, $header2 29%, $header2 34%, $header1 34%, $header1 44%, $header2 44%, $header2 49%, transparent 49%, transparent),
+          radial-gradient(circle at 0    50%, $header2 5%, $header1 5%, $header1 15%, $header2 15%, $header2 20%, $header1 20%, $header1 29%, $header2 29%, $header2 34%, $header1 34%, $header1 44%, $header2 44%, $header2 49%, transparent 49%, transparent);
           background-size: 100px 50px;
 
-
-
-          background:
-          linear-gradient(135deg, rgba(20,10,30,1) 21px, rgba(30,30,30,1) 22px, rgba(30,30,30,1) 24px, transparent 24px, transparent 67px, rgba(30,30,30,1) 67px, rgba(30,30,30,1) 69px, transparent 69px),
-          linear-gradient(225deg, rgba(20,10,30,1) 21px, rgba(30,30,30,1) 22px, rgba(30,30,30,1) 24px, transparent 24px, transparent 67px, rgba(30,30,30,1) 67px, rgba(30,30,30,1) 69px, transparent 69px)0 64px;
-          background-color:rgba(20,10,30,1);
-          background-size: 64px 128px;
         ul{
           display:flex;
           width:100%;
@@ -428,7 +418,8 @@ h1,h2,h3,h4,h5,p,div,article,a,button{
               border:none;
               font-size: 1.25rem;
               &:hover, &:active{
-                text-shadow: 0 0 10px $base-color;
+                text-shadow: 0 0 10px $secondary-color;
+                color:$secondary-color;
                 font-style:italic;
               }
             }
