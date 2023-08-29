@@ -53,15 +53,17 @@
             font-style:italic;
             @include centered();
           }
+          a:link,
+          a:visited,
           button{
             background-color: transparent;
             border:none;
-            // font-size: 5rem;
-            // color: rgb(255,240,105)
-          }
-          a:link,
-          a:visited{
             text-decoration:none;
+          }
+          a, button{
+            &:hover, &:active, &:focus{
+              color:$secondary-color;
+            }
           }
         }
       }
@@ -178,7 +180,7 @@
               span{
                 width:10px;
                 height:5px;
-                background-color:white;
+                background-color:$secondary-color;
                 margin-right: 10px;
                 border-radius:50%;
               }

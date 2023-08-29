@@ -264,6 +264,9 @@ h1, h2, h3, h4, h5, p, div, article, a, button {
     border: none;
     font-style: italic;
   }
+  body #popupMolecule div#btnHolder button:hover, body #popupMolecule div#btnHolder button:active, body #popupMolecule div#btnHolder button:focus {
+    color: rgb(255, 240, 103);
+  }
   body footer {
     color: white;
     position: absolute;
